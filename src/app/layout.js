@@ -1,15 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lalezar, Lato, Roboto } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lalezar = Lalezar({
+  weight:"400",
+  variable: "--font-lalezar",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const lato = Lato({
+//   variable: "--font-lato",
+//   subsets: ["latin"],
+// });
+
+// const roboto = Roboto({
+//   variable: "--font-roboto",
+//   subsets: ["latin"],
+// });
 
 export const metadata = {
   title: "PharmaCheck",
@@ -20,7 +26,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${lalezar.variable}  antialiased`}
+        // className={`${lalezar.variable} ${lato.variable} ${roboto.variable} antialiased`}
       >
         {children}
       </body>
