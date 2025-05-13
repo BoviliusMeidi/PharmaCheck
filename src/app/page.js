@@ -1,19 +1,16 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useSearch } from '@/context/SearchContext';
 import { useState } from 'react';
 
 const HomePage = () => {
   const router = useRouter();
-  const { setCode } = useSearch();
   const [inputCode, setInputCode] = useState('');
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (inputCode.trim()) {
-      setCode(inputCode);
-      router.push('/about');
+      router.push(`/product/${inputCode}`);
     }
   };
 
