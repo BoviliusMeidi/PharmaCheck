@@ -30,7 +30,6 @@ export async function GET(req) {
   const accessToken = await getAccessToken();
   const url = 'https://api-satusehat-stg.dto.kemkes.go.id/kfa-v2/products';
   const params = new URLSearchParams({
-    identifier: "kfa",
     code: code,
   });
 
