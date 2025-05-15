@@ -55,7 +55,7 @@ const VerifyProductPage = () => {
             <div className='flex flex-row mt-8 w-4xl justify-center items-center gap-8 rounded-[20px] bg-[#F4F4F4] p-12 shadow-custom'>
               <Image src="/Medicine.png" width={120} height={120} alt='Valid Medicine' className="rotate-6" />
               <div className='flex flex-col gap-4 items-start'>
-                <h1 className='font-header text-left text-5xl font-extrabold'>{product.result.name}</h1>
+                <h1 className='font-header text-left text-5xl font-extrabold'>{product.result.nama_dagang}</h1>
                 <div
                   className="font-description text-2xl"
                   dangerouslySetInnerHTML={{ __html: stripTags(product.result.description) }}
