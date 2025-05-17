@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import LoadingSpinner from './LoadingSpinner';
-import { fetchMedicineByCode } from '@/lib/fetchMedicine';
-import { stripTags } from '@/lib/utils';
+import { fetchMedicineAuto } from '@/lib/fetchMedicine';
+import { stripTags, capitalizeWords } from '@/lib/utils';
 
 const VerifyProductPage = () => {
   const params = useParams();
@@ -19,7 +19,7 @@ const VerifyProductPage = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const result = await fetchMedicineByCode(code);
+        const result = await fetchMedicineAuto(code);
         setProduct(result);
       } catch (err) {
         console.error('Fetch error:', err);
@@ -36,7 +36,10 @@ const VerifyProductPage = () => {
   }
 
   return (
-    <div className="bg-[url('/background/wave-right.svg')] bg-no-repeat bg-cover bg-center">
+    <div className={`bg-no-repeat bg-cover bg-center ${product.api
+        ? "bg-[url('/background/wave-bottom.svg')]"
+        : "bg-[url('/background/wave-up.svg')]"
+      }`}>
       <div className="h-screen flex flex-col justify-center items-center gap-[44]">
         {product.api ? (
           <div className='flex flex-col justify-center items-center'>
@@ -50,7 +53,7 @@ const VerifyProductPage = () => {
               <Image src={product.db?.image_url || '/Medicine.png'} width={product.db?.image_url ? 200 : 120}
                 height={product.db?.image_url ? 200 : 120} alt='Valid Medicine' className="rotate-6 mx-8" />
               <div className='flex flex-col gap-4 items-start'>
-                <h1 className='font-header text-left text-5xl font-extrabold'>{product.api.nama_dagang}</h1>
+                <h1 className='font-header text-left text-5xl font-extrabold'>{capitalizeWords(product.api.nama_dagang)}</h1>
                 <div
                   className="font-description text-2xl"
                   dangerouslySetInnerHTML={{ __html: stripTags(product.api.description) }}
