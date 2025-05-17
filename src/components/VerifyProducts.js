@@ -3,30 +3,28 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
-
-function stripTags(html) {
-  return html.replace(/<\/?p>/g, '').replace(/<br\s*\/?>/g, '');
-}
+import LoadingSpinner from './LoadingSpinner';
+import { fetchMedicineByCode } from '@/lib/fetchMedicine';
+import { stripTags } from '@/lib/utils';
 
 const VerifyProductPage = () => {
   const params = useParams();
   const code = params.id;
   const [product, setProduct] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // <-- Tambah loading state
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!code) return;
 
     const fetchData = async () => {
       try {
-        setIsLoading(true); // Mulai loading
-        const res = await fetch(`/api/products?code=${code}`);
-        const data = await res.json();
-        setProduct(data);
+        setIsLoading(true);
+        const result = await fetchMedicineByCode(code);
+        setProduct(result);
       } catch (err) {
         console.error('Fetch error:', err);
       } finally {
-        setIsLoading(false); // Selesai loading
+        setIsLoading(false);
       }
     };
 
@@ -34,17 +32,13 @@ const VerifyProductPage = () => {
   }, [code]);
 
   if (isLoading) {
-    return (
-      <div className="h-screen flex justify-center items-center bg-white">
-        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-      </div>
-    );
+    return <LoadingSpinner />
   }
 
   return (
     <div className="bg-[url('/background/wave-right.svg')] bg-no-repeat bg-cover bg-center">
       <div className="h-screen flex flex-col justify-center items-center gap-[44]">
-        {product?.result ? (
+        {product.api ? (
           <div className='flex flex-col justify-center items-center'>
             <h1 className='font-title text-center text-7xl'>Your Medicine is Valid and Legal</h1>
             <p className='font-description text-center text-2xl'>
@@ -53,12 +47,13 @@ const VerifyProductPage = () => {
               dosage match the drug information you need.
             </p>
             <div className='flex flex-row mt-8 w-4xl justify-center items-center gap-8 rounded-[20px] bg-[#F4F4F4] p-12 shadow-custom'>
-              <Image src="/Medicine.png" width={120} height={120} alt='Valid Medicine' className="rotate-6" />
+              <Image src={product.db?.image_url || '/Medicine.png'} width={product.db?.image_url ? 200 : 120}
+                height={product.db?.image_url ? 200 : 120} alt='Valid Medicine' className="rotate-6 mx-8" />
               <div className='flex flex-col gap-4 items-start'>
-                <h1 className='font-header text-left text-5xl font-extrabold'>{product.result.nama_dagang}</h1>
+                <h1 className='font-header text-left text-5xl font-extrabold'>{product.api.nama_dagang}</h1>
                 <div
                   className="font-description text-2xl"
-                  dangerouslySetInnerHTML={{ __html: stripTags(product.result.description) }}
+                  dangerouslySetInnerHTML={{ __html: stripTags(product.api.description) }}
                 />
                 <button className='font-description text-2xl text-blue-500'>Read More</button>
               </div>
