@@ -1,19 +1,8 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import SearchForm from '@/components/SearchForm';
 
-const VerifyPage = () => {
-    const router = useRouter();
-    const [inputCode, setInputCode] = useState('');
-
-    const handleSearch = (e) => {
-        e.preventDefault();
-        if (inputCode.trim()) {
-            router.push(`/verify/${inputCode}`);
-        }
-    };
-
+export default function VerifyPage() {
     return (
         <div className="bg-[url('/background/wave-left.svg')] bg-no-repeat bg-cover bg-center">
             <div className="h-screen flex flex-col justify-center items-center gap-[44]">
@@ -21,19 +10,10 @@ const VerifyPage = () => {
                     <h1 className='font-title text-center text-8xl'>Verify Your Medicine</h1>
                     <p className='font-description text-center text-2xl'>Verify all types of drugs using their codes, brand names, and generic names. Ensure <br /> authenticity and safety with verified information from BPOM and KEMENKES.</p>
                 </div>
-                <form onSubmit={handleSearch} className='font-description flex justify-between items-center max-w-4xl w-full h-[70] bg-base rounded-[40]'>
-                    <input
-                        className='w-full ml-12 text-2xl'
-                        type="text"
-                        placeholder="Type a medicine name, illness, or classification code..."
-                        value={inputCode}
-                        onChange={(e) => setInputCode(e.target.value)}
-                    />
-                    <button type="submit" className='cursor-pointer text-[32px] bg-mint rounded-[40px] border w-[300] h-[70] font-[600] border-black'>Verify</button>
-                </form>
+                <div className='w-full max-w-4xl'>
+                    <SearchForm title={"Verify"} />
+                </div>
             </div>
         </div>
     );
 };
-
-export default VerifyPage;
