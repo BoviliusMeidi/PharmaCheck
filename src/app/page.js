@@ -1,30 +1,11 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import SearchForm from '@/components/SearchForm';
 
-const HomePage = () => {
-  const router = useRouter();
-  const [inputCode, setInputCode] = useState('');
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (inputCode.trim()) {
-      router.push(`/product/${inputCode}`);
-    }
-  };
-
+export default function HomePage ()  {
   return (
-      <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Enter product code"
-          value={inputCode}
-          onChange={(e) => setInputCode(e.target.value)}
-        />
-        <button type="submit">Search</button>
-      </form>
+    <div className='max-w-4xl'>
+      <SearchForm title={"Search"}/>
+    </div>
   );
 };
-
-export default HomePage;
