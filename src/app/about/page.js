@@ -54,7 +54,7 @@ export default function AboutPage() {
         </div>
       </div>
       <div className="about-fourth-page">
-        <div className="about-titles text-center">Our Partner</div>
+        <div className="about-titles text-center">OUR PARTNER</div>
         <div className="partner-content">
           <div className="partner-image">
             <img src="/aboutUs/Morales.png" alt="Morales Photo" className="morales-photo" />
@@ -67,6 +67,23 @@ export default function AboutPage() {
             <div className="about-texts">
               With the help of Morales we can guarantee and add information to the data and drug explanations.
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="about-fifth-page">
+        <div className="about-titles text-center">OUR EXPERT</div>
+        <div className="about-expert-text">
+              We Are the team of scientists, thinker, and industry expert from Tarumanagara University students with IT majors. 
+        </div>
+        <div className="about-image-row">
+          <div className="about-image-Bovi">
+            <img src="/aboutUs/BoviliusMeidi.png" alt="BoviliusMeidi" />
+          </div>
+          <div className="about-image-Hans">
+            <img src="/aboutUs/HansThobieSachio.png" alt="HansThobieSachio" />
+          </div>
+          <div className="about-image-Dec">
+            <img src="/aboutUs/JustineDeclan.png" alt="JustineDeclan" />
           </div>
         </div>
       </div>
