@@ -30,6 +30,13 @@ body {
   margin: 0 auto;
 }
 
+.about-fourth-page {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1083px;
+  margin: 0 auto;
+}
+
 .about-title {
   color: #000;
   font-family: var(--font-title);
@@ -70,6 +77,17 @@ body {
   margin-bottom: 2rem;
 }
 
+.about-texts {
+  color: #000;
+  text-align: justify;
+  font-family: var(--font-description);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+
 .logo-container {
   display: flex;
   flex-direction: row;
@@ -101,4 +119,35 @@ body {
 .hermina-icon {
   width: 371px;
   height: 371px;
+}
+
+.about-name {
+  color: #000;
+  text-align: justify;
+  font-family: var(--font-description);
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 2rem 0;
+}
+
+.partner-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.morales-photo {
+  width: 533px;
+  height: 603px;
+  border-radius: 20px;
+}
+
+.partner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
