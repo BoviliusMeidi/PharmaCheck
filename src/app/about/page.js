@@ -32,6 +32,27 @@ export default function AboutPage() {
           <img src="/RS Hermina Mitra Logo.png" alt="RS Hermina Logo" className="hermina-icon" />
         </div>
       </div>
+      <div className="about-third-page">
+        <div className="about-titles">Consumen Complaint Service</div>
+        <div className="about-subtitle">
+          Hermina Podomoro Hospital
+        </div>
+        <div className='about-text'>
+          Blok E 3, Jl. Danau Agung 2 No.28 - 30, RT.3/RW.16, Sunter Agung, 
+          Kec. Tj. Priok, Jkt Utara, Daerah Khusus Ibukota Jakarta 14350. 
+          Telp: (021) 6404910
+        </div>
+        <div className="about-subtitle">
+          BPOM Customer Service
+        </div>
+        <div className='about-text'>
+          Jalan Percetakan Negara Nomor 23 Jakarta - 10560 - Indonesia.<br />
+          Telp: HALO BPOM 150053<br />
+          SMS: +6281 21 9999 533<br /> 
+          Web: https://www.pom.go.id/pengaduan<br />
+          E-Mail: halobpom@pom.go.id 
+        </div>
+      </div>
     </div>
   );
 }
