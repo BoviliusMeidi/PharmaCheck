@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <div className="about-container">
       <Navbar />
-
+      <br /><br /><br /><br /><br /><br />
       <div className="about-first-page">
         <div className="about-title">ABOUT US</div>
         <div className="about-text">
