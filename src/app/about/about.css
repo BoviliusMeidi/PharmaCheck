@@ -42,3 +42,36 @@ body {
   line-height: normal;
   margin-bottom: 30px;
 }
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1083px;
+  height: auto;
+  gap: 2rem;
+}
+
+.logo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.kemenkes-icon {
+  width: 617px;
+  height: 162px;
+  margin-bottom: 2rem;
+}
+
+.bpom-icon {
+  width: 617px;
+  height: 185px;
+}
+
+.hermina-icon {
+  width: 371px;
+  height: 371px;
+}
