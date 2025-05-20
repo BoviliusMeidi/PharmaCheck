@@ -26,10 +26,10 @@ export default function AboutPage() {
         </div>
         <div className="logo-container">
           <div className="logo-column">
-            <img src="/Kemenkes Logo.png" alt="Kemenkes Logo" className="kemenkes-icon" />
-            <img src="/BPOM Logo.png" alt="BPOM Logo" className="bpom-icon" />
+            <img src="/aboutUs/Kemenkes Logo.png" alt="Kemenkes Logo" className="kemenkes-icon" />
+            <img src="/aboutUs/BPOM Logo.png" alt="BPOM Logo" className="bpom-icon" />
           </div>
-          <img src="/RS Hermina Mitra Logo.png" alt="RS Hermina Logo" className="hermina-icon" />
+          <img src="/aboutUs/RS Hermina Mitra Logo.png" alt="RS Hermina Logo" className="hermina-icon" />
         </div>
       </div>
       <div className="about-third-page">
@@ -51,6 +51,23 @@ export default function AboutPage() {
           SMS: +6281 21 9999 533<br /> 
           Web: https://www.pom.go.id/pengaduan<br />
           E-Mail: halobpom@pom.go.id 
+        </div>
+      </div>
+      <div className="about-fourth-page">
+        <div className="about-titles text-center">Our Partner</div>
+        <div className="partner-content">
+          <div className="partner-image">
+            <img src="/aboutUs/Morales.png" alt="Morales Photo" className="morales-photo" />
+          </div>
+          <div className="partner-text">
+            <div className="about-name">Morales S.Farm</div>
+            <div className="about-texts">
+              Our partner is a pharmacist from hermina podomoro hospital in the field of health services who is experienced and understands about medicine.
+            </div>
+            <div className="about-texts">
+              With the help of Morales we can guarantee and add information to the data and drug explanations.
+            </div>
+          </div>
         </div>
       </div>
     </div>
