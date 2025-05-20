@@ -23,12 +23,39 @@ body {
   margin: 0 auto;
 }
 
+.about-third-page {
+  flex: 1;
+  padding: 3rem 2rem;
+  max-width: 1083px;
+  margin: 0 auto;
+}
+
 .about-title {
   color: #000;
   font-family: var(--font-title);
   font-size: 96px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about-titles {
+  color: #000;
+  font-family: var(--font-title);
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+
+.about-subtitle {
+  color: #000;
+  text-align: justify;
+  font-family: var(--font-description);
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 800;
   line-height: normal;
 }
 
@@ -40,7 +67,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .logo-container {
