@@ -3,10 +3,11 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-export default function SearchForm({ title }) {
+export default function SearchForm({ title , objective }) {
   const router = useRouter();
   const [inputCode, setInputCode] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const objectiveURL = objective;
 
   useEffect(() => {
     const fetchSuggestions = async () => {
@@ -35,7 +36,11 @@ export default function SearchForm({ title }) {
           body: JSON.stringify({ keyword }),
         });
       }
-      router.push(`/product/${keyword}`);
+      if (objectiveURL == "product") {
+        router.push(`/product/${keyword}`);
+      }else if(objectiveURL == "verify"){
+        router.push(`/verify/${keyword}`);
+      }
     }
   };
 
