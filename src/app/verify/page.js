@@ -11,7 +11,7 @@ export default function VerifyPage() {
                     <p className='font-description text-center text-2xl'>Verify all types of drugs using their codes, brand names, and generic names. Ensure <br /> authenticity and safety with verified information from BPOM and KEMENKES.</p>
                 </div>
                 <div className='w-full max-w-4xl'>
-                    <SearchForm title={"Verify"} />
+                    <SearchForm title={"Verify"} objective={"verify"}/>
                 </div>
             </div>
         </div>
