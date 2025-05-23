@@ -1,4 +1,4 @@
-import Navbar from '../../components/Navbar';
+import Navbar from '@/components/Navbar';
 
 export default function AboutPage() {
   return (
@@ -88,13 +88,13 @@ export default function AboutPage() {
         </div>
         <div className="w-[1025px] flex justify-center gap-20 mt-8 flex-wrap">
           <div>
-            <img src="/aboutUs/BoviliusMeidi.png" alt="BoviliusMeidi" className="w-[285px] h-[510px] rounded-lg shadow" />
+            <img src="/aboutUs/BoviliusMeidi.png" alt="BoviliusMeidi" className="w-[285px] h-[510px] rounded-3xl shadow" />
           </div>
           <div>
-            <img src="/aboutUs/HansThobieSachio.png" alt="HansThobieSachio" className="mt-12 w-[285px] h-[510px] rounded-lg shadow" />
+            <img src="/aboutUs/HansThobieSachio.png" alt="HansThobieSachio" className="mt-12 w-[285px] h-[510px] rounded-3xl shadow" />
           </div>
           <div>
-            <img src="/aboutUs/JustineDeclan.png" alt="JustineDeclan" className="w-[285px] h-[510px] rounded-lg shadow" />
+            <img src="/aboutUs/JustineDeclan.png" alt="JustineDeclan" className="w-[285px] h-[510px] rounded-3xl shadow" />
           </div>
         </div>
       </div>
