@@ -1,8 +1,10 @@
+import Navbar from '@/components/Navbar';
+
 export default function CategoriesPage() {
     return (
-        <div>
-            <p>Categories Page</p>
-            <h1>Welcome to PharmaCheck</h1>
+        <div className="flex flex-col bg-[#FCF7F8] m-0">
+              <Navbar />
+
         </div>
     )
 }
