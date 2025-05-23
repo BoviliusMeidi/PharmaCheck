@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 
 export default function VerifyPage() {
     return (
-        <div className="bg-[url('/background/wave-left.svg')] bg-no-repeat bg-cover bg-center">
+        <div className="bg-[url('/background/wave-left.svg')] bg-[#FCF7F8] bg-no-repeat bg-cover bg-center">
             <Navbar />
             <div className="h-screen flex flex-col justify-center items-center gap-[44]">
                 <div className='flex flex-col gap-[16]'>
