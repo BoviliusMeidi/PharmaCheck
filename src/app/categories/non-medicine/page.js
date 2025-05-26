@@ -55,9 +55,9 @@ export default function CategoriesPage() {
   }, [totalCardPages]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FCF7F8]">
+    <div className="flex flex-col bg-[#FCF7F8]">
       <MenuBar />
-      <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto mt-0">
+      <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto">
         <h1 className="font-title text-center text-[80px]">
           Non-Medicine Categories
         </h1>
