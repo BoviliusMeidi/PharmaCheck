@@ -51,24 +51,25 @@ export default function SearchForm({ title , objective }) {
 
   return (
     <div className="relative w-full">
-      <form
-        onSubmit={handleSearch}
-        className="font-description flex justify-between items-center w-full h-[70] bg-base rounded-[40]"
+    <form
+      onSubmit={handleSearch}
+      className="font-description flex items-center w-full h-[70px] rounded-[40px] bg-white border border-black/50 overflow-hidden"
+    >
+      <input
+        className="flex-1 h-full px-6 text-xl md:text-2xl bg-transparent outline-none placeholder-gray-500"
+        type="text"
+        placeholder="Type a medicine name, illness, or classification code..."
+        value={inputCode}
+        onChange={(e) => setInputCode(e.target.value)}
+      />
+      <button
+        type="submit"
+        className="h-full w-[150px] bg-mint text-black font-bold text-2xl rounded-r-[40px] border-l border-black"
       >
-        <input
-          className="w-full ml-12 text-2xl"
-          type="text"
-          placeholder="Type a medicine name, illness, or classification code..."
-          value={inputCode}
-          onChange={(e) => setInputCode(e.target.value)}
-        />
-        <button
-          type="submit"
-          className="cursor-pointer text-[32px] bg-mint rounded-[40px] border w-[300] h-[70] font-[600] border-black"
-        >
-          {title}
-        </button>
-      </form>
+        {title}
+      </button>
+    </form>
+
 
       {suggestions.length > 0 && (
         <ul className="absolute top-full left-0 w-full bg-white border border-gray-300 rounded-md mt-1 z-10 max-h-60 overflow-y-auto">
