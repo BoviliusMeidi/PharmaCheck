@@ -21,9 +21,9 @@ export default function AZ() {
 
             const { data, error } = await supabase
                 .from('medicines')
-                .select('id, medicine_name, image_url')
+                .select(`*, sub_sub_categories (name, sub_categories (name, main_categories (name)))`)
                 .ilike('medicine_name', `${keyword}%`)
-                .eq('medicine_categories', 'non-medicine')
+                .eq('sub_sub_categories.sub_categories.main_categories.name', 'non-medicine')
 
             if (error) {
                 console.error('Error fetching medicines:', error.message);
