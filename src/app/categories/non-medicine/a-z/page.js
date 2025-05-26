@@ -14,7 +14,7 @@ export default function AZPage() {
                     <div className="text-black mx-auto font-description text-[25px] font-normal mb-16 leading-[1.2]">
                         Detailed and accurate information is provided on over 24,000 prescription and over-the-counter medicines for both consumers and healthcare professionals.
                     </div>
-                    <div className="w-full max-w-4xl mx-auto flex justify-center">
+                    <div className="w-full mx-auto flex justify-center">
                         <SearchForm title={"Search"} objective={"product"}/>
                     </div>
                     <div className="mt-12">

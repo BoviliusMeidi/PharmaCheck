@@ -6,15 +6,15 @@ import SearchForm from '@/components/SearchForm';
 import MenuBar from '@/components/MenuBar';
 
 const categories = [
-  { id: 1, title: 'Cough, Cold & Flu', icon: '/non-categories/image6.png', href: '/' },
-  { id: 2, title: 'Digestive Problem', icon: '/non-categories/image7.png', href: '/' },
-  { id: 3, title: 'THT Problem', icon: '/non-categories/image8.png', href: '/' },
-  { id: 4, title: 'Skin Condition', icon: '/non-categories/image9.png', href: '/' },
-  { id: 5, title: 'Bones & Joints', icon: '/non-categories/image10.png', href: '/' },
-  { id: 6, title: 'Allergies', icon: '/non-categories/image14.png', href: '/' },
+  { id: 1, title: 'Cough, Cold & Flu', icon: '/non-categories/image6.png', href: '' },
+  { id: 2, title: 'Digestive Problem', icon: '/non-categories/image7.png', href: '' },
+  { id: 3, title: 'THT Problem', icon: '/non-categories/image8.png', href: '' },
+  { id: 4, title: 'Skin Condition', icon: '/non-categories/image9.png', href: '' },
+  { id: 5, title: 'Bones & Joints', icon: '/non-categories/image10.png', href: '' },
+  { id: 6, title: 'Allergies', icon: '/non-categories/image14.png', href: '' },
 ];
 
-export default function BeautySelfcare() {
+export default function BeautySelfcarePage() {
   return (
     <div className="relative bg-[#FCF7F8] min-h-screen flex flex-col">
       <MenuBar />
@@ -26,7 +26,7 @@ export default function BeautySelfcare() {
             medicines for both consumers and healthcare professionals.
           </p>
 
-          <div className="w-full max-w-4xl mx-auto flex justify-center">
+          <div className="w-full mx-auto flex justify-center">
             <SearchForm title="Search" objective="product" />
           </div>
 

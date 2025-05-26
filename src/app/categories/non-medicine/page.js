@@ -6,8 +6,8 @@ import MenuBar from '@/components/MenuBar';
 const nonMedicineCategories = [
   { key: 'a-z', label: 'Non-Medicine A-Z', icon: '/non-categories/a-z.svg' },
   { key: 'vitamin-suplement', label: 'Vitamins & Supplements', icon: '/non-categories/vitamin-suplement.svg' },
-  { key: 'mom-child', label: 'Mom & Child', icon: '/non-categories/mom-child.svg' },
   { key: 'popular', label: 'Popular Search', icon: '/non-categories/popular.svg' },
+  { key: 'mom-child', label: 'Mom & Child', icon: '/non-categories/mom-child.svg' },
   { key: 'beauty-selfcare', label: 'Beauty & Self-care', icon: '/non-categories/beauty-selfcare.svg' },
   { key: 'fitness', label: 'Fitness', icon: '/non-categories/a-z.svg' },
   { key: 'wellness', label: 'Wellness', icon: '/non-categories/vitamin-suplement.svg' },
@@ -17,16 +17,16 @@ const nonMedicineCategories = [
 ];
 
 const promoCards = [
-  { id: 1, image: '/non-categories/image1.png', alt: 'Promo 1', link: '/' },
-  { id: 2, image: '/non-categories/image2.png', alt: 'Promo 2', link: '/' },
-  { id: 3, image: '/non-categories/image1.png', alt: 'Promo 3', link: '/' },
-  { id: 4, image: '/non-categories/image2.png', alt: 'Promo 4', link: '/' },
-  { id: 5, image: '/non-categories/image1.png', alt: 'Promo 5', link: '/' },
-  { id: 6, image: '/non-categories/image2.png', alt: 'Promo 6', link: '/' },
-  { id: 7, image: '/non-categories/image1.png', alt: 'Promo 7', link: '/' },
-  { id: 8, image: '/non-categories/image2.png', alt: 'Promo 8', link: '/' },
-  { id: 9, image: '/non-categories/image1.png', alt: 'Promo 9', link: '/' },
-  { id: 10, image: '/non-categories/image2.png', alt: 'Promo 10', link: '/' },
+  { id: 1, image: '/non-categories/image1.png', alt: 'Promo 1', link: '' },
+  { id: 2, image: '/non-categories/image2.png', alt: 'Promo 2', link: '' },
+  { id: 3, image: '/non-categories/image1.png', alt: 'Promo 3', link: '' },
+  { id: 4, image: '/non-categories/image2.png', alt: 'Promo 4', link: '' },
+  { id: 5, image: '/non-categories/image1.png', alt: 'Promo 5', link: '' },
+  { id: 6, image: '/non-categories/image2.png', alt: 'Promo 6', link: '' },
+  { id: 7, image: '/non-categories/image1.png', alt: 'Promo 7', link: '' },
+  { id: 8, image: '/non-categories/image2.png', alt: 'Promo 8', link: '' },
+  { id: 9, image: '/non-categories/image1.png', alt: 'Promo 9', link: '' },
+  { id: 10, image: '/non-categories/image2.png', alt: 'Promo 10', link: '' },
 ];
 
 export default function CategoriesPage() {
