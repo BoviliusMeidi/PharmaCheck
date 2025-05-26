@@ -8,7 +8,7 @@ const nonMedicineCategories = [
   { key: 'vitamin-suplement', label: 'Vitamins & Supplements', icon: '/non-categories/vitamin-suplement.svg' },
   { key: 'mom-child', label: 'Mom & Child', icon: '/non-categories/mom-child.svg' },
   { key: 'popular', label: 'Popular Search', icon: '/non-categories/popular.svg' },
-  { key: 'beauty', label: 'Beauty & Self-care', icon: '/non-categories/beauty-selfcare.svg' },
+  { key: 'beauty-selfcare', label: 'Beauty & Self-care', icon: '/non-categories/beauty-selfcare.svg' },
   { key: 'fitness', label: 'Fitness', icon: '/non-categories/a-z.svg' },
   { key: 'wellness', label: 'Wellness', icon: '/non-categories/vitamin-suplement.svg' },
   { key: 'personal-care', label: 'Personal Care', icon: '/non-categories/mom-child.svg' },
