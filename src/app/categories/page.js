@@ -5,7 +5,7 @@ export default function CategoriesPage() {
     return (
         <div className="flex bg-[#FCF7F8] m-0">
             <Navbar />
-            <div className="h-screen flex-1 py-12 px-8 max-w-[1083px] mx-auto mt-24 ">
+            <div className="h-screen flex-1 py-48 px-8 max-w-[1083px] mx-auto mt-auto ">
                 <div className='font-title text-center text-[80px]'>Medicine Categories</div>
                 <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-40">
                     <Link href="/categories/medicine">
