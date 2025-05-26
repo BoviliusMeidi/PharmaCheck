@@ -6,15 +6,12 @@ import SearchForm from '@/components/SearchForm';
 import MenuBar from '@/components/MenuBar';
 
 const categories = [
-  { id: 1, title: 'Female Hormones', icon: '/categories/image19.png', href: '' },
-  { id: 2, title: 'Erectile Dysfunction', icon: '/categories/image18.png', href: '' },
-  { id: 3, title: 'Womanly Care', icon: '/categories/image22.png', href: '' },
-  { id: 4, title: 'Oral Contraceptives', icon: '/categories/image20.png', href: '' },
-  { id: 5, title: 'Male Supplements', icon: '/categories/image23.png', href: '' },
-  { id: 6, title: 'Test Packs', icon: '/categories/image25.png', href: '' },
+  { id: 1, title: 'Asthma', icon: '/categories/image21.png', href: '' },
+  { id: 2, title: 'Heat Diasease', icon: '/categories/image24.png', href: '' },
+  { id: 3, title: 'Diabetes', icon: '/categories/image28.png', href: '' },
 ];
 
-export default function SexualHealthPage() {
+export default function RoutineMedicinePage() {
   return (
     <div className="relative bg-[#FCF7F8] min-h-screen flex flex-col">
       <MenuBar />
