@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 
 export default function AdminPage() {
@@ -10,7 +10,26 @@ export default function AdminPage() {
   const [imageFile, setImageFile] = useState(null);
   const [preview, setPreview] = useState('');
   const [message, setMessage] = useState('');
-  const [category, setCategory] = useState('medicine');
+  const [subSubCategories, setSubSubCategories] = useState([]);
+  const [selectedSubSubCategoryId, setSelectedSubSubCategoryId] = useState('');
+  const [searchText, setSearchText] = useState('');
+
+  // Fetch sub_sub_categories on mount
+  useEffect(() => {
+    const fetchSubSubCategories = async () => {
+      const { data, error } = await supabase
+        .from('sub_sub_categories')
+        .select('id, name');
+
+      if (error) {
+        console.error('Error fetching sub_sub_categories:', error.message);
+      } else {
+        setSubSubCategories(data);
+      }
+    };
+
+    fetchSubSubCategories();
+  }, []);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -23,7 +42,7 @@ export default function AdminPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!kfaCode || !medicineName || !imageFile ||!category) {
+    if (!kfaCode || !medicineName || !imageFile || !selectedSubSubCategoryId) {
       setMessage('All fields are required.');
       return;
     }
@@ -31,7 +50,7 @@ export default function AdminPage() {
     const timestamp = Date.now();
     const fileName = `${timestamp}-${imageFile.name}`;
 
-    // 1. Upload to Supabase Storage
+    // Upload image
     const { data: uploadData, error: uploadError } = await supabase
       .storage
       .from('medicine-images')
@@ -48,13 +67,14 @@ export default function AdminPage() {
       .from('medicine-images')
       .getPublicUrl(fileName);
 
+    // Insert to medicines table
     const { error: dbError } = await supabase
       .from('medicines')
       .insert([{
         kfa_code: kfaCode,
         medicine_name: medicineName.toLowerCase(),
-        medicine_categories : category,
-        image_url: publicUrl
+        image_url: publicUrl,
+        sub_sub_categories: selectedSubSubCategoryId
       }]);
 
     if (dbError) {
@@ -63,12 +83,29 @@ export default function AdminPage() {
       return;
     }
 
+    // Clear form
     setMessage('Upload successful!');
     setKfaCode('');
     setMedicineName('');
-    setCategory('');
     setImageFile(null);
     setPreview('');
+    setSearchText('');
+    setSelectedSubSubCategoryId('');
+  };
+
+  const handleSubSubCategoryChange = (e) => {
+    const inputValue = e.target.value;
+    setSearchText(inputValue);
+
+    const found = subSubCategories.find(
+      (cat) => cat.name.toLowerCase() === inputValue.toLowerCase()
+    );
+
+    if (found) {
+      setSelectedSubSubCategoryId(found.id);
+    } else {
+      setSelectedSubSubCategoryId('');
+    }
   };
 
   return (
@@ -76,7 +113,7 @@ export default function AdminPage() {
       <div className="w-full max-w-xl bg-white rounded-xl shadow-md p-8 space-y-6">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-blue-700 mb-2">Upload Medicine</h1>
-          <p className="text-gray-500">Add new medicine with image and KFA code</p>
+          <p className="text-gray-500">Add new medicine with image, KFA code, and category</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -103,17 +140,20 @@ export default function AdminPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
+            <label className="block text-sm font-medium text-gray-700 mb-1">Sub Sub Category</label>
+            <input
+              list="subSubCategories"
+              value={searchText}
+              onChange={handleSubSubCategoryChange}
+              placeholder="Search or select category"
               className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            >
-              <option value="medicine">Medicine</option>
-              <option value="non-medicine">Non-Medicine</option>
-            </select>
+            />
+            <datalist id="subSubCategories">
+              {subSubCategories.map((cat) => (
+                <option key={cat.id} value={cat.name} />
+              ))}
+            </datalist>
           </div>
-
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Medicine Image</label>
@@ -149,6 +189,5 @@ export default function AdminPage() {
         </form>
       </div>
     </div>
-
   );
 }
