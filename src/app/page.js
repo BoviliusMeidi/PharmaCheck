@@ -121,7 +121,7 @@ export default function HomePage ()  {
                 <br/>
                 RS Hermina Podomoro (for medical validation),
                 <br/>
-                BPOM (Badan POM) – Indonesia’s drug and food authority,
+                BPOM (Badan POM) - Indonesia drug and food authority,
                 <br/>
                 Ministry of Health (Kemenkes RI).
                 <br/>
