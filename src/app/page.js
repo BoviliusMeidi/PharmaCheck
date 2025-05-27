@@ -2,6 +2,8 @@
 
 import SearchForm from '@/components/SearchForm';
 import Navbar from '@/components/Navbar';
+import AccordionItem from '@/components/AccordionItem';
+
 
 export default function HomePage ()  {
     return (
@@ -56,11 +58,28 @@ export default function HomePage ()  {
               </div>
             </div>
           </div>
-
-
-
-
-
+          <div className='h-full w-full flex flex-col gap-12 justify-center my-20 mb-32'>
+            <AccordionItem title="What is Pharma Check?">
+              <div
+                className="font-header text-3xl mt-4"
+              />
+            </AccordionItem>
+            <AccordionItem title="Are all information and data guaranteed to be correct?">
+              <div
+                className="font-header text-3xl mt-4"
+              />
+            </AccordionItem>
+            <AccordionItem title="How to use Pharma Check?">
+              <div
+                className="font-header text-3xl mt-4"
+              />
+            </AccordionItem>
+            <AccordionItem title="Who are the partners of Pharma Check?">
+              <div
+                className="font-header text-3xl mt-4"
+              />
+            </AccordionItem>
+          </div>
         </div>
     );
 };
