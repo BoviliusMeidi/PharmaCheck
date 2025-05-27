@@ -24,17 +24,16 @@ export default function CategoriesResult() {
             setLoading(true);
 
             const { data: subCatData, error: subCatError } = await supabase
-                .from('sub_categories')
-                .select(`sub_sub_categories(*)`)
-                .eq('name', categoryTitle);
+                .from('Sub_Sub_Categories')
+                .select(`Sub_Sub_Sub_Categories(*)`)
+                .eq('Name', categoryTitle);
 
             if (subCatError) {
-                console.error('Error fetching sub categories:', subCatError.message);
+                console.error('Error fetching sub sub categories:', subCatError.message);
             }
 
             if (subCatData && subCatData.length > 0) {
-                const flatData = subCatData.flatMap(item => item.sub_sub_categories || []);
-                console.log(flatData);
+                const flatData = subCatData.flatMap(item => item.Sub_Sub_Sub_Categories || []);
                 setCategories(flatData);
                 setMode('category');
                 setLoading(false);
@@ -43,17 +42,16 @@ export default function CategoriesResult() {
 
             const { data: productData, error: productError } = await supabase
                 .from('medicines')
-                .select(`*, sub_sub_categories (name, sub_categories (name, main_categories (name)))`)
-                .eq('sub_sub_categories.name', categoryTitle)
-                .eq('sub_sub_categories.sub_categories.main_categories.name', 'medicine')
-                .not('sub_sub_categories', 'is', null);
+                .select(`*, Sub_Sub_Sub_Categories(Name, Sub_Sub_Categories (Name, Sub_Categories (Name, Main_Categories (Name))))`)
+                .eq('Sub_Sub_Sub_Categories.Name', categoryTitle)
+                .eq('Sub_Sub_Sub_Categories.Sub_Sub_Categories.Sub_Categories.Main_Categories.Name', 'Medicine')
+                .not('Sub_Sub_Sub_Categories', 'is', null);
 
             if (productError) {
                 console.error('Error fetching products:', productError.message);
             }
 
             if (productData && productData.length > 0) {
-                console.log(productData)
                 setProducts(productData);
                 setMode('product');
             }
@@ -81,7 +79,7 @@ export default function CategoriesResult() {
                     {mode === 'category' && (
                         <div className="grid grid-cols-4 gap-10 p-4">
                             {categories.map(cat => (
-                                <Category key={cat.id} data={cat} />
+                                <Category key={cat.Sub_Sub_Sub_ID} data={cat} />
                             ))}
                         </div>
                     )}
