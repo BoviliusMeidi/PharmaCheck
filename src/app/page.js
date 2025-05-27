@@ -86,24 +86,47 @@ export default function HomePage ()  {
           </div>
           <div className='h-full w-full flex flex-col gap-12 justify-center my-20 mb-32'>
             <AccordionItem title="What is Pharma Check?">
-              <div
-                className="font-header text-3xl mt-4"
-              />
+              <div className="font-header text-3xl mt-4">
+                PharmaCheck is a simple and handy tool that helps you find complete and trusted information about legal 
+                medicines in Indonesia. Whether you are a regular user, a pharmacist, or even a doctor - you can look up 
+                any drug and get its details like name, ingredients, uses, side effects, and more. 
+                We are here to make sure everyone understands their meds better.
+              </div>
             </AccordionItem>
+
             <AccordionItem title="Are all information and data guaranteed to be correct?">
-              <div
-                className="font-header text-3xl mt-4"
-              />
+              <div className="font-header text-3xl mt-4">
+                We work hard to keep everything accurate! 
+                All the data you see in PharmaCheck comes from official sources like BPOM 
+                (Indonesia National Agency of Drug and Food Control) and the Ministry of Health. 
+                Plus, we verify it with our partners from hospitals and pharmacies. 
+                So yeah - its about as legit as it gets. But if you are ever unsure, 
+                its always good to double-check with a health professional.
+              </div>
             </AccordionItem>
+            
             <AccordionItem title="How to use Pharma Check?">
-              <div
-                className="font-header text-3xl mt-4"
-              />
+              <div className ="font-header text-3xl mt-4">
+                Itssuper easy! Just type the name of the medicine - it can be the brand name, 
+                generic name, or even the registration number - into the search bar. 
+                You will instantly get all the info you need, including how to use the medicine, 
+                what to watch out for, and whether its officially registered or not. 
+                No signup or complicated steps - just search and go.
+              </div>
             </AccordionItem>
+
             <AccordionItem title="Who are the partners of Pharma Check?">
-              <div
-                className="font-header text-3xl mt-4"
-              />
+              <div className="font-header text-3xl mt-4">
+                PharmaCheck works closely with trusted institutions like:
+                <br/>
+                RS Hermina Podomoro (for medical validation),
+                <br/>
+                BPOM (Badan POM) – Indonesia’s drug and food authority,
+                <br/>
+                Ministry of Health (Kemenkes RI).
+                <br/>
+                Our Partners help us ensure the data is accurate, up-to-date, and truly useful for everyone
+              </div>
             </AccordionItem>
           </div>
           <Footer/>
