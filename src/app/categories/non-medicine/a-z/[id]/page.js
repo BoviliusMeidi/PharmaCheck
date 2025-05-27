@@ -21,15 +21,16 @@ export default function AZ() {
 
             const { data, error } = await supabase
                 .from('medicines')
-                .select(`*, sub_sub_categories (name, sub_categories (name, main_categories (name)))`)
+                .select(`*, Sub_Sub_Sub_Categories(Name, Sub_Sub_Categories (Name, Sub_Categories (Name, Main_Categories (Name))))`)
                 .ilike('medicine_name', `${keyword}%`);
-
+            
             const filteredData = data?.filter(
                 (item) =>
-                    item.sub_sub_categories &&
-                    item.sub_sub_categories.sub_categories &&
-                    item.sub_sub_categories.sub_categories.main_categories &&
-                    item.sub_sub_categories.sub_categories.main_categories.name === 'non-medicine'
+                    item.Sub_Sub_Sub_Categories &&
+                    item.Sub_Sub_Sub_Categories.Sub_Sub_Categories &&
+                    item.Sub_Sub_Sub_Categories.Sub_Sub_Categories.Sub_Categories &&
+                    item.Sub_Sub_Sub_Categories.Sub_Sub_Categories.Sub_Categories.Main_Categories &&
+                    item.Sub_Sub_Sub_Categories.Sub_Sub_Categories.Sub_Categories.Main_Categories.Name === 'Non-Medicine'
             );
 
             if (error) {
