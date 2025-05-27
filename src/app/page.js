@@ -3,7 +3,9 @@
 import SearchForm from '@/components/SearchForm';
 import Navbar from '@/components/Navbar';
 import AccordionItem from '@/components/AccordionItem';
-
+import Link from 'next/link';
+import Footer from '@/components/Footer';
+import Image from 'next/image';
 
 export default function HomePage ()  {
     return (
@@ -22,22 +24,30 @@ export default function HomePage ()  {
           </div>
           <div className="w-full flex justify-center items-center py-15">
             <div className="grid grid-cols-2 max-w-5xl w-full">
-              <div className="h-[615px] w-[490px] bg-[url('/icon/vermed.png')] bg-[#fdfdfd] bg-no-repeat bg-top bg-[length:450px_450px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-center group">
-                <h2 className="font-lato text-[64px]  font-bold text-black transition-colors duration-300">
-                  Verify Your Medicine
-                </h2>
-              </div>
-              <div className="flex flex-col gap-8 justify-start items-center">
-                <div className="h-[370px] w-[490px] bg-[url('/icon/medcat.png')] bg-[#fdfdfd] bg-no-repeat bg-top bg-[length:244.27px_256.52px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-center group">
-                  <h2 className="font-lato text-[45px] font-bold text-black transition-colors duration-300">
-                    Medicine Categories
+              <Link href="/verify">
+                <div className="h-[615px] w-[490px] bg-[url('/icon/vermed.png')] bg-[#fdfdfd] bg-no-repeat bg-top bg-[length:450px_450px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-center group">
+                  <h2 className="font-lato text-[64px]  font-bold text-black transition-colors duration-300">
+                    Verify Your Medicine
                   </h2>
                 </div>
-              <div className="h-[210px] w-[490px] bg-[url('/icon/nonmedcat.png')] bg-[#fdfdfd] bg-no-repeat bg-[position:80px_center]  bg-[length:137px_137px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-end group">
-                <h2 className="w-[180px] font-lato text-[40px] font-bold text-black transition-colors duration-300">
-                  Non Medicine
-                </h2>
-              </div>
+              </Link>
+              
+              <div className="flex flex-col gap-8 justify-start items-center">
+                <Link href="/categories/medicine">
+                  <div className="h-[370px] w-[490px] bg-[url('/icon/medcat.png')] bg-[#fdfdfd] bg-no-repeat bg-top bg-[length:244.27px_256.52px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-center group">
+                    <h2 className="font-lato text-[45px] font-bold text-black transition-colors duration-300">
+                      Medicine Categories
+                    </h2>
+                  </div>
+                </Link>
+
+                <Link href="/categories/non-medicine">
+                  <div className="h-[210px] w-[490px] bg-[url('/icon/nonmedcat.png')] bg-[#fdfdfd] bg-no-repeat bg-[position:80px_center]  bg-[length:137px_137px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-end group">
+                    <h2 className="w-[180px] font-lato text-[40px] font-bold text-black transition-colors duration-300">
+                      Non Medicine
+                    </h2>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -51,10 +61,26 @@ export default function HomePage ()  {
               </div>
               <div className="flex flex-row justify-between items-center w-full max-w-[1083px] gap-8">
                 <div className="flex flex-col gap-8">
-                  <img src="/aboutUs/Kemenkes Logo.png" alt="Kemenkes Logo" className="w-[617px] h-[162px] mb-8" />
-                  <img src="/aboutUs/BPOM Logo.png" alt="BPOM Logo" className="w-[617px] h-[185px]" />
+                  <Image 
+                    src="/aboutUs/Kemenkes Logo.png" 
+                    alt="Kemenkes Logo" 
+                    width={617}
+                    height={162}
+                    className="object-contain" 
+                  />
+                  <Image 
+                    src="/aboutUs/BPOM Logo.png" 
+                    alt="BPOM Logo" 
+                    width={617}
+                    height={185}
+                    className="object-contain" />
                 </div>
-                <img src="/aboutUs/RS Hermina Mitra Logo.png" alt="RS Hermina Logo" className="w-[371px] h-[371px]" />
+                <Image 
+                  src="/aboutUs/RS Hermina Mitra Logo.png" 
+                  alt="RS Hermina Logo" 
+                  width={371}
+                  height={371}
+                  className="object-contain" />
               </div>
             </div>
           </div>
@@ -80,6 +106,7 @@ export default function HomePage ()  {
               />
             </AccordionItem>
           </div>
+          <Footer/>
         </div>
     );
 };
