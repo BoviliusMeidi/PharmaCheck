@@ -4,16 +4,16 @@ import CategoryAccordion from "./CategoryAccordion";
 export default function CategoryTable({ title }) {
     const category = {
         "Cough, Cold & Flu": ["Cough and Flu", "Nasal", "Balms & Essential Oils", "For Baby & Child", "Herbal Treatments"],
-        "Digestive Problem": ["Test"],
-        "THT Problem": ["Test"],
-        "Skin Condition": ["Test"],
-        "Bones and Joints": ["Test"],
-        "Allergies": ["Test"],
-        "Fever and Pain": ["Test"],
-        "Eyes Problem": ["Test"],
-        "Infection": ["Test"],
-        "Fertility and More": ["Test"],
-        "Other Medicines": ["Test"],
+        "Digestive Problem": ["Acid Reflux & GERD", "Diarrhea", "Constipation & Hemorrhoids", "Nausea and Vomiting", "Worm Infections"],
+        "THT Problem": ["Mouth Ulcers & Herpes", "Antiseptic Mouthwash","Throat Lozenges", "Ear Drops", "Nasal Hygiene"],
+        "Skin Condition": ["Acne", "Skin Infections", "Dermatitis & Eczema", "Others Skin Medicine"],
+        "Bones and Joints": ["Bone and Osteoporosis", "Muscle Relaxant", "Gout & Arthritis", "Balms & Oils"],
+        "Allergies": ["Allergy Remedies", "Itch Relief"],
+        "Fever and Pain": ["Fever and Pain Relief", "Heat and Cold Therapy", "Infants and Children", "Herbal Treatments"],
+        "Eyes Problem": ["Itchy, Dry and Red", "More Eyes Problem"],
+        "Infection": ["Antibiotic", "Antivirus", "Antifungal"],
+        "Fertility and More": ["Bladder and Kidney", "Women", "Men", "Contraceptive Pills", "Other Fertility"],
+        "Other Medicines": ["Anti Inflammatory", "Sleep Disorders", "Blood Disorders", "Brain and Nerves", "Mental Health", "Other Medicine"],
     }
 
     return (
