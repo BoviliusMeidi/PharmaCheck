@@ -22,13 +22,20 @@ export default function AZ() {
             const { data, error } = await supabase
                 .from('medicines')
                 .select(`*, sub_sub_categories (name, sub_categories (name, main_categories (name)))`)
-                .ilike('medicine_name', `${keyword}%`)
-                .eq('sub_sub_categories.sub_categories.main_categories.name', 'non-medicine')
+                .ilike('medicine_name', `${keyword}%`);
+
+            const filteredData = data?.filter(
+                (item) =>
+                    item.sub_sub_categories &&
+                    item.sub_sub_categories.sub_categories &&
+                    item.sub_sub_categories.sub_categories.main_categories &&
+                    item.sub_sub_categories.sub_categories.main_categories.name === 'non-medicine'
+            );
 
             if (error) {
                 console.error('Error fetching medicines:', error.message);
             } else {
-                setMedicines(data);
+                setMedicines(filteredData);
             }
             setLoading(false);
         };
@@ -44,7 +51,7 @@ export default function AZ() {
         <div className="p-12 bg-[url('/background/wave-left.svg')] bg-no-repeat bg-cover bg-center">
             <div className="flex flex-row gap-8">
                 <div className="w-1/5">
-                    <AZTable title={'Non Medicine'} />
+                    <AZTable title={'Non Medicine'} objective={'non-medicine'}/>
                 </div>
                 <div className="flex flex-col gap-4 w-full">
                     <h1 className="font-title text-7xl">{`Non-Medicine ${keyword.toUpperCase()} Alphabet`}</h1>

@@ -2,10 +2,10 @@
 
 import { useRouter } from "next/navigation"
 
-export default function AlphabetButton({ text }) {
+export default function AlphabetButton({ text , objective}) {
     const router = useRouter();
     const handleClick = () => {
-        router.push(`/categories/medicine/a-z/${text.toLowerCase()}`)
+        router.push(`/categories/${objective}/a-z/${text.toLowerCase()}`)
     }
     return (
         <button
