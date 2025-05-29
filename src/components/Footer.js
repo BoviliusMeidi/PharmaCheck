@@ -16,12 +16,12 @@ export default function Footer() {
             className="object-contain"
           />
           <div className="flex flex-col gap-2 w-full">
-            <span className="font-lato text-[35px] font-bold text-black">Site Map</span>
+            <span className="font-lato text-[35px] font-bold text-black">Daftar Halaman</span>
             <div className="flex flex-wrap gap-3 font-lato text-[25px] font-bold text-black">
-              <Link href="/" className="hover:text-[#004E64]">Home</Link>
-              <Link href="/about" className="hover:text-[#004E64]">About</Link>
-              <Link href="/verify" className="hover:text-[#004E64]">Verify</Link>
-              <Link href="/categories" className="hover:text-[#004E64]">Categories</Link>
+              <Link href="/" className="hover:text-[#004E64]">Beranda</Link>
+              <Link href="/about" className="hover:text-[#004E64]">Tentang</Link>
+              <Link href="/verify" className="hover:text-[#004E64]">Verifikasi</Link>
+              <Link href="/categories" className="hover:text-[#004E64]">Kategori</Link>
             </div>
           </div>
           <p className="text-sm text-gray-500 mt-4">
@@ -33,11 +33,11 @@ export default function Footer() {
         <div className="flex flex-col gap-6 w-full">
           {/* Consumer Complaint Service */}
           <div>
-            <h4 className="font-lato text-[35px] font-bold text-black mb-2">Consumer Complaint Service</h4>
+            <h4 className="font-lato text-[35px] font-bold text-black mb-2">Layanan Keluhan Konsumen</h4>
             <div className="flex flex-col gap-16 font-lato text-[25px] font-regular text-black ">
               <div>
                 <p className="leading-[100%] mb-4">
-                  RS Hermina Podomoro.<br/>
+                  Rumah Sakit Hermina Podomoro.<br/>
                   Blok E 3, Jl. Danau Agung 2 No.28 - 30, RT.3/RW.16,<br />
                   Sunter Agung, Kec. Tj. Priok, Jkt Utara,<br />
                   Daerah Khusus Ibukota Jakarta 14350

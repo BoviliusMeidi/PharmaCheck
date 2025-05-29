@@ -7,25 +7,25 @@ export default function AboutPage() {
       <br /><br /><br /><br /><br /><br />
       <div className="flex-1 p-6 px-8 max-w-[1083px] mx-auto">
         <div className="text-black font-title text-[96px] font-normal">
-          ABOUT US
+          TENTANG KAMI
         </div>
         <div className="text-[35px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
-          PharmaCheck is a trusted platform that provides verified information on drugs legally distributed in Indonesia.
-          We aim to support healthcare professionals and the public by offering easy access to essential data such as
-          drug names, uses, classifications, and official codes—sourced from reliable institutions like the Ministry of Health and BPOM.
+          PharmaCheck adalah platform tepercaya yang menyediakan informasi terverifikasi tentang obat-obatan yang didistribusikan secara legal di Indonesia.
+          Kami bertujuan untuk mendukung para profesional kesehatan dan masyarakat dengan menawarkan akses mudah ke data penting seperti
+          nama obat, kegunaan, klasifikasi, dan kode resmi yang bersumber dari institusi terpercaya seperti Kementerian Kesehatan dan BPOM.
         </div>
         <div className="text-[35px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
-          Though focused on Indonesia, PharmaCheck is designed to be a useful reference for medical communities worldwide.
-          By promoting accurate and legal drug information, we help improve medical decision-making and contribute to safer,
-          more informed healthcare.
+          Meskipun berfokus pada Indonesia, PharmaCheck dirancang untuk menjadi referensi yang berguna bagi komunitas medis di seluruh dunia.
+          Dengan mempromosikan informasi obat yang akurat dan legal, kami membantu meningkatkan pengambilan keputusan medis dan berkontribusi pada perawatan kesehatan yang lebih aman,
+          perawatan kesehatan yang lebih aman dan terinformasi.
         </div>
       </div>
       <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto">
         <div className="text-black font-title text-[96px] font-normal">
-          DATA CORRECTNESS
+          KEBENARAN DATA
         </div>
         <div className="text-[35px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
-          We take legal, valid and correct data from SatuSehat (Indonesian Ministry of Health). Then to add the truth of the data and its completeness we work with pharmacists from Hermia Podomoro Hospital, with the help of medical experts our data can be tested.
+          Kami mengambil data yang sah, valid dan benar dari SatuSehat (Kementrian Kesehatan RI). Kemudian untuk menambah kebenaran data dan kelengkapannya kami bekerja sama dengan apoteker dari Rumah Sakit Hermia Podomoro, dengan bantuan para ahli medis data kami dapat teruji.
         </div>
         <div className="flex flex-row justify-between items-center w-full max-w-[1083px] gap-8">
           <div className="flex flex-col gap-8">
@@ -37,10 +37,10 @@ export default function AboutPage() {
       </div>
       <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto">
         <div className="text-black font-title text-[80px] font-normal mb-8">
-          Consumen Complaint Service
+          Layanan Keluhan Konsumen
         </div>
         <div className="text-black text-justify font-description text-[35px] font-extrabold mb-0">
-          Hermina Podomoro Hospital
+          Rumah Sakit Hermina Podomoro
         </div>
         <div className="text-[35px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
           Blok E 3, Jl. Danau Agung 2 No.28 - 30, RT.3/RW.16, Sunter Agung, 
@@ -48,7 +48,7 @@ export default function AboutPage() {
           Telp: (021) 6404910
         </div>
         <div className="text-black text-justify font-description text-[35px] font-extrabold mb-0">
-          BPOM Customer Service
+          Layanan Pengaduan BPOM
         </div>
         <div className="text-[35px] font-description font-normal text-black text-justify leading-[1.2]">
           Jalan Percetakan Negara Nomor 23 Jakarta - 10560 - Indonesia.<br />
@@ -60,7 +60,7 @@ export default function AboutPage() {
       </div>
       <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto">
         <div className="text-black font-title text-[80px] font-normal text-center mb-8">
-          OUR PARTNER
+          MITRA KAMI
         </div>
         <div className="flex flex-row items-start gap-12 mt-8">
           <div>
@@ -71,20 +71,20 @@ export default function AboutPage() {
               Morales S.Farm
             </div>
             <div className="text-[32px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
-              Our partner is a pharmacist from hermina podomoro hospital in the field of health services who is experienced and understands about medicine.
+              Mitra kami adalah apoteker dari rumah sakit hermina podomoro di bidang pelayanan kesehatan yang sudah berpengalaman dan mengerti tentang obat-obatan.
             </div>
             <div className="text-[32px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
-              With the help of Morales we can guarantee and add information to the data and drug explanations.
+              Dengan bantuan Morales, kami dapat menjamin dan menambahkan informasi pada data dan penjelasan obat.
             </div>
           </div>
         </div>
       </div>
       <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto mt-12">
         <div className="text-black font-title text-[80px] font-normal text-center mb-8">
-          OUR EXPERT
+          AHLI KAMI
         </div>
         <div className="w-[947px] text-black text-center font-description text-[32px] font-normal mb-16 leading-[1.2]">
-          We Are the team of scientists, thinker, and industry expert from Tarumanagara University students with IT majors. 
+          Kami adalah tim yang terdiri dari para ilmuwan, pemikir, dan pakar industri dari mahasiswa Universitas Tarumanagara jurusan IT. 
         </div>
         <div className="w-[1025px] flex justify-center gap-20 mt-8 flex-wrap">
           <div>

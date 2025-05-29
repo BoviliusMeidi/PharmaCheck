@@ -43,11 +43,11 @@ const VerifyProductPage = () => {
       <div className="h-screen flex flex-col justify-center items-center gap-[44]">
         {product.api ? (
           <div className='flex flex-col justify-center items-center'>
-            <h1 className='font-title text-center text-7xl'>Your Medicine is Valid and Legal</h1>
+            <h1 className='font-title text-center text-7xl'>Obat Anda Sah dan Legal</h1>
             <p className='font-description text-center text-2xl'>
-              Here are the results of your search, make sure that the code, name, <br />
-              or shape matches what you have. Make sure that the benefits and <br />
-              dosage match the drug information you need.
+              Berikut adalah hasil pencarian Anda, pastikan kode, nama, <br />
+              atau bentuknya sesuai dengan yang Anda miliki. Pastikan bahwa manfaat dan <br />
+              dosis sesuai dengan informasi obat yang Anda butuhkan.
             </p>
             <div className='flex flex-row mt-8 w-4xl justify-center items-center gap-8 rounded-[20px] bg-[#F4F4F4] p-12 shadow-custom'>
               <Image src={product.db?.image_url || '/Medicine.png'} width={product.db?.image_url ? 200 : 120}
@@ -64,10 +64,10 @@ const VerifyProductPage = () => {
           </div>
         ) : (
           <div className='flex flex-col gap-[16] justify-center items-center'>
-            <h1 className='font-title text-center text-7xl'>Your Medicine is Not <br /> Valid and Legal</h1>
+            <h1 className='font-title text-center text-7xl'>Obat Anda Tidak <br /> Sah dan Legal</h1>
             <p className='font-header text-center text-2xl'>
-              Enter the code again correctly, or use another <br />
-              generic name to ensure the correctness of the data.
+              Masukkan kode lagi dengan benar, atau gunakan kode lain <br />
+              nama generik untuk memastikan kebenaran data.
             </p>
             <Image src="/NotSmile.png" width={250} height={250} alt='Not Valid and Legal' />
           </div>
