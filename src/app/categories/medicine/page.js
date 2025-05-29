@@ -5,15 +5,13 @@ import MenuBar from '@/components/MenuBar';
 
 const MedicineCategories = [
   { key: 'a-z', label: 'Medicine A-Z', icon: '/categories/a-z.svg' },
-  { key: 'bydisease', label: 'By Disease', icon: '/categories/bydisease.svg' },
   { key: 'popular', label: 'Popular Search', icon: '/categories/popular.svg' },
-  { key: 'sexual-health', label: 'Sexual Health', icon: '/categories/sexual-health.svg' },
+  { key: 'bydisease', label: 'By Disease', icon: '/categories/bydisease.svg' },
+  { key: 'heart-health', label: 'Heart Health', icon: '/categories/heart-health.svg' },
   { key: 'routine-medicine', label: 'Routine Medicine', icon: '/categories/routine-medicine.svg' },
-  { key: 'fitness', label: 'Fitness', icon: '/categories/a-z.svg' },
-  { key: 'wellness', label: 'Wellness', icon: '/categories/bydisease.svg' },
-  { key: 'personal-care', label: 'Personal Care', icon: '/categories/popular.svg' },
-  { key: 'hygiene', label: 'Hygiene', icon: '/categories/sexual-health.svg' },
-  { key: 'natural', label: 'Natural Remedies', icon: '/categories/routine-medicine.svg' },
+  { key: 'diabetes', label: 'Diabetes', icon: '/categories/diabetes.svg' },
+  { key: 'oncology-immune', label: 'Oncology and Immunosuppressants', icon: '/categories/oncology-immune.svg' },
+  { key: 'asthma', label: 'Asthma', icon: '/categories/asthma.svg' },
 ];
 
 const promoCards = [
@@ -30,7 +28,7 @@ const promoCards = [
 ];
 
 export default function CategoriesPage() {
-  const iconsPerPage = 5;
+  const iconsPerPage = 4;
   const totalIconPages = Math.ceil(MedicineCategories.length / iconsPerPage);
   const [iconPage, setIconPage] = useState(0);
 

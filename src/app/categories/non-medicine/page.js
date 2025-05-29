@@ -5,15 +5,13 @@ import MenuBar from '@/components/MenuBar';
 
 const nonMedicineCategories = [
   { key: 'a-z', label: 'Non-Medicine A-Z', icon: '/non-categories/a-z.svg' },
-  { key: 'vitamin-suplement', label: 'Vitamins & Supplements', icon: '/non-categories/vitamin-suplement.svg' },
   { key: 'popular', label: 'Popular Search', icon: '/non-categories/popular.svg' },
+  { key: 'vitamin-suplement', label: 'Vitamins & Supplements', icon: '/non-categories/vitamin-suplement.svg' },
   { key: 'mom-child', label: 'Mom & Child', icon: '/non-categories/mom-child.svg' },
   { key: 'beauty-selfcare', label: 'Beauty & Self-care', icon: '/non-categories/beauty-selfcare.svg' },
-  { key: 'fitness', label: 'Fitness', icon: '/non-categories/a-z.svg' },
-  { key: 'wellness', label: 'Wellness', icon: '/non-categories/vitamin-suplement.svg' },
-  { key: 'personal-care', label: 'Personal Care', icon: '/non-categories/mom-child.svg' },
-  { key: 'hygiene', label: 'Hygiene', icon: '/non-categories/popular.svg' },
-  { key: 'natural', label: 'Natural Remedies', icon: '/non-categories/beauty-selfcare.svg' },
+  { key: 'sexual-health', label: 'Sexual Health', icon: '/non-categories/sexual-health.svg' },
+  { key: 'milk', label: 'Milk', icon: '/non-categories/milk.svg' },
+  { key: 'nasal-care', label: 'Nasal Care', icon: '/non-categories/nasal-care.svg' },
 ];
 
 const promoCards = [
@@ -30,7 +28,7 @@ const promoCards = [
 ];
 
 export default function CategoriesPage() {
-  const iconsPerPage = 5;
+  const iconsPerPage = 4;
   const totalIconPages = Math.ceil(nonMedicineCategories.length / iconsPerPage);
   const [iconPage, setIconPage] = useState(0);
 
