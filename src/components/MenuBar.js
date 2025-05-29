@@ -21,7 +21,7 @@ export default function MenuBar() {
         </button>
         <div className="flex items-center gap-8">
           <div className="flex w-[208px] h-[56px] rounded-[40px] bg-white shadow-md overflow-hidden">
-            <button className="flex items-center gap-2 px-[14px] py-[8px] rounded-[40px] bg-[#c7f5f0] text-black text-[24px] font-semibold font-description transition-colors">
+            <button className="flex items-center gap-2 px-[14px] py-[8px] rounded-[40px] text-black text-[24px] font-semibold font-description transition-colors">
               <img
                 src="/USA Flag.png"
                 alt="US Flag"
@@ -29,7 +29,7 @@ export default function MenuBar() {
               />{' '}
               ENG
             </button>
-            <button className="flex items-center gap-2 px-[14px] py-[8px] rounded-[40px] text-black text-[24px] font-semibold font-description transition-colors">
+            <button className="flex items-center gap-2 px-[14px] py-[8px] rounded-[40px] bg-[#c7f5f0] text-black text-[24px] font-semibold font-description transition-colors">
               <img
                 src="/Indonesia Flag.png"
                 alt="ID Flag"
