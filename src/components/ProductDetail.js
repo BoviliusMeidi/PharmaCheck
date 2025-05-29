@@ -92,7 +92,7 @@ export default function ProductDetailResult () {
           </div>
         </div>
       ) : (
-        <p>No data found or searching...</p>
+        <p>Tidak ada data yang ditemukan atau mencari...</p>
       )}
     </div>
   );

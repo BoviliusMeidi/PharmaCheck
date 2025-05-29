@@ -9,8 +9,8 @@ export default function VerifyPage() {
             <Navbar />
             <div className="h-screen flex flex-col justify-center items-center gap-[44]">
                 <div className='flex flex-col gap-[16]'>
-                    <h1 className='font-title text-center text-8xl'>Verify Your Medicine</h1>
-                    <p className='font-description text-center text-2xl'>Verify all types of drugs using their codes, brand names, and generic names. Ensure <br /> authenticity and safety with verified information from BPOM and KEMENKES.</p>
+                    <h1 className='font-title text-center text-8xl'>Verifikasi Obat Anda</h1>
+                    <p className='font-description text-center text-2xl'>Verifikasi semua jenis obat dengan menggunakan kode, nama merek, dan nama generiknya. Memastikan <br /> keaslian dan keamanan dengan informasi terverifikasi dari BPOM dan KEMENKES.</p>
                 </div>
                 <div className='w-full max-w-4xl'>
                     <SearchForm title={"Verify"} objective={"verify"}/>

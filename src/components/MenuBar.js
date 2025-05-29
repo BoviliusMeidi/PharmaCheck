@@ -49,16 +49,16 @@ export default function MenuBar() {
       {menuOpen && (
         <div className="absolute top-[70px] right-6 bg-white rounded shadow-md p-4 flex flex-col gap-2 z-50">
           <a href="/" className="text-lg font-medium hover:text-blue-500">
-            Home
+            Beranda
           </a>
           <a href="/about" className="text-lg font-medium hover:text-blue-500">
-            About
+            Tentang
           </a>
           <a href="/verify" className="text-lg font-medium hover:text-blue-500">
-            Verify
+            Verifikasi
           </a>
           <a href="/categories" className="text-lg font-medium hover:text-blue-500">
-            Categories
+            Kategori
           </a>
         </div>
       )}

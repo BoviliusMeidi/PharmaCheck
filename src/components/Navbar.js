@@ -6,10 +6,10 @@ import { usePathname } from 'next/navigation';
 export default function Navbar() {
   const pathname = usePathname();
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Verify', href: '/verify' },
-    { label: 'Categories', href: '/categories' },
+    { label: 'Beranda', href: '/' },
+    { label: 'Tentang', href: '/about' },
+    { label: 'Verifikasi', href: '/verify' },
+    { label: 'Kategori', href: '/categories' },
   ];
 
   return (
