@@ -1,14 +1,15 @@
 import { supabase } from '@/lib/supabaseClient'; // sesuaikan path
+import { data } from 'autoprefixer';
 
 /**
  * Fetch medicine data by KFA code or medicine name
- * 
  * @param {string} value - The code or name to search for
  * @param {'kfa_code'|'medicine_name'} type - The search type
  */
 
-export async function fetchMedicineAuto(input) {
+export async function fetchMedicineAuto(encodeInput) {
   try {
+    const input = decodeURIComponent(encodeInput);
     const isCode = /^\d+$/.test(input);
 
     let dbData = null;
@@ -35,6 +36,8 @@ export async function fetchMedicineAuto(input) {
       dbData = data;
       kfaCode = data?.kfa_code;
     }
+
+    console.log(data)
 
     // Jika tidak ditemukan di database
     if (!kfaCode) {
