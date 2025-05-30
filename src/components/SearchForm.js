@@ -58,7 +58,7 @@ export default function SearchForm({ title , objective }) {
       <input
         className="flex-1 h-full px-6 text-xl md:text-2xl bg-transparent outline-none placeholder-gray-500"
         type="text"
-        placeholder="Type a medicine name, illness, or classification code..."
+        placeholder="Ketik nama obat, penyakit, atau kode klasifikasi..."
         value={inputCode}
         onChange={(e) => setInputCode(e.target.value)}
       />

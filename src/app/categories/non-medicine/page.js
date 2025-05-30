@@ -7,49 +7,50 @@ import Footer from '@/components/Footer';
 
 const nonMedicineCategories = [
   { key: 'a-z',               label: 'Non-Medicine A-Z',          icon: '/non-categories/a-z.svg' },
-  { key: 'popular',           label: 'Popular Search',            icon: '/non-categories/popular.svg' },
-  { key: 'vitamin-suplement', label: 'Vitamins & Supplements',    icon: '/non-categories/vitamin-suplement.svg' },
-  { key: 'mom-child',         label: 'Mom & Child',               icon: '/non-categories/mom-child.svg' },
-  { key: 'beauty-selfcare',   label: 'Beauty & Self-care',        icon: '/non-categories/beauty-selfcare.svg' },
-  { key: 'sexual-health',     label: 'Sexual Health',             icon: '/non-categories/sexual-health.svg' },
-  { key: 'milk',              label: 'Milk',                      icon: '/non-categories/milk.svg' },
-  { key: 'nasal-care',        label: 'Nasal Care',                icon: '/non-categories/nasal-care.svg' },
+  { key: 'popular',           label: 'Popular Search',            icon: '/non-categories/popular.png' },
+  { key: 'vitamin-suplement', label: 'Vitamins & Supplements',    icon: '/non-categories/vitamin-suplement.png' },
+  { key: 'mom-child',         label: 'Mom & Child',               icon: '/non-categories/mom-child.png' },
+  { key: 'beauty-selfcare',   label: 'Beauty & Self-care',        icon: '/non-categories/beauty-selfcare.png' },
+  { key: 'sexual-health',     label: 'Sexual Health',             icon: '/non-categories/sexual-health.png' },
+  { key: 'milk',              label: 'Milk',                      icon: '/non-categories/milk.png' },
+  { key: 'nasal-care',        label: 'Nasal Care',                icon: '/non-categories/nasal-care.png' },
 ];
 
 const promoCards = [
-  { id: 1,  image: '/non-categories/image1.png', alt: 'Promo 1', link: '' },
-  { id: 2,  image: '/non-categories/image2.png', alt: 'Promo 2', link: '' },
-  { id: 3,  image: '/non-categories/image1.png', alt: 'Promo 3', link: '' },
-  { id: 4,  image: '/non-categories/image2.png', alt: 'Promo 4', link: '' },
-  { id: 5,  image: '/non-categories/image1.png', alt: 'Promo 5', link: '' },
-  { id: 6,  image: '/non-categories/image2.png', alt: 'Promo 6', link: '' },
-  { id: 7,  image: '/non-categories/image1.png', alt: 'Promo 7', link: '' },
-  { id: 8,  image: '/non-categories/image2.png', alt: 'Promo 8', link: '' },
-  { id: 9,  image: '/non-categories/image1.png', alt: 'Promo 9', link: '' },
-  { id: 10, image: '/non-categories/image2.png', alt: 'Promo 10', link: '' },
+  { id: 1,  image: '/non-categories/image-ads-1.png', alt: 'Promo 1', link: '' },
+  { id: 2,  image: '/non-categories/image-ads-2.png', alt: 'Promo 2', link: '' },
+  { id: 3,  image: '/non-categories/image-ads-3.png', alt: 'Promo 3', link: '' },
+  { id: 4,  image: '/non-categories/image-ads-4.png', alt: 'Promo 4', link: '' },
+  { id: 5,  image: '/non-categories/image-ads-5.png', alt: 'Promo 5', link: '' },
+  { id: 6,  image: '/non-categories/image-ads-6.png', alt: 'Promo 6', link: '' },
+  { id: 7,  image: '/non-categories/image-ads-7.png', alt: 'Promo 7', link: '' },
+  { id: 8,  image: '/non-categories/image-ads-8.png', alt: 'Promo 8', link: '' },
+  { id: 9,  image: '/non-categories/image-ads-9.png', alt: 'Promo 9', link: '' },
+  { id: 10, image: '/non-categories/image-ads-10.png', alt: 'Promo 10', link: '' },
 ];
 
 export default function CategoriesPage() {
-  const iconsPerPage    = 4;
-  const totalIconPages  = Math.ceil(nonMedicineCategories.length / iconsPerPage);
+  const iconsPerPage = 4;
+  const totalIconPages = Math.ceil(nonMedicineCategories.length / iconsPerPage);
   const [iconPage, setIconPage] = useState(0);
 
-  const cardsPerPage   = 2;
+  const cardsPerPage = 2;
   const totalCardPages = Math.ceil(promoCards.length / cardsPerPage);
   const [cardPage, setCardPage] = useState(0);
-  const autoPlayRef    = useRef();
+  const autoPlayRef = useRef();
 
-  const handleIconPrev = () => setIconPage(p => Math.max(p - 1, 0));
-  const handleIconNext = () => setIconPage(p => Math.min(p + 1, totalIconPages - 1));
-  const visibleIcons   = nonMedicineCategories.slice(
-    iconPage * iconsPerPage,
-    iconPage * iconsPerPage + iconsPerPage
-  );
+  const handleIconPrev = () => setIconPage((p) => (p - 1 + totalIconPages) % totalIconPages);
+  const handleIconNext = () => setIconPage((p) => (p + 1) % totalIconPages);
 
-  // auto-play promo carousel
+  const visibleIcons = Array.from({ length: iconsPerPage }).map((_, i) => {
+    const index = (iconPage * iconsPerPage + i) % nonMedicineCategories.length;
+    return nonMedicineCategories[index];
+  })
+
+  // Auto-play carousel
   useEffect(() => {
     autoPlayRef.current = () => {
-      setCardPage(prev => (prev + 1) % totalCardPages);
+      setCardPage((prev) => (prev + 1) % totalCardPages);
     };
   });
   useEffect(() => {
@@ -57,8 +58,8 @@ export default function CategoriesPage() {
     return () => clearInterval(id);
   }, [totalCardPages]);
 
-  const nextPage = () => setCardPage(p => (p + 1) % totalCardPages);
-  const prevPage = () => setCardPage(p => (p - 1 + totalCardPages) % totalCardPages);
+  const nextPage = () => setCardPage((prev) => (prev + 1) % totalCardPages);
+  const prevPage = () => setCardPage((prev) => (prev - 1 + totalCardPages) % totalCardPages);
 
   return (
     <div className="flex flex-col bg-[#FCF7F8]">
@@ -73,7 +74,6 @@ export default function CategoriesPage() {
           <div className="relative mt-10">
             <button
               onClick={handleIconPrev}
-              disabled={iconPage === 0}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 z-10"
             >
               &#10094;
@@ -98,7 +98,6 @@ export default function CategoriesPage() {
             </div>
             <button
               onClick={handleIconNext}
-              disabled={iconPage === totalIconPages - 1}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 z-10"
             >
               &#10095;

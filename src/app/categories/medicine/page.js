@@ -6,27 +6,27 @@ import MenuBar from '@/components/MenuBar';
 import Footer from '@/components/Footer';
 
 const MedicineCategories = [
-  { key: 'a-z', label: 'Medicine A-Z', icon: '/categories/a-z.svg' },
-  { key: 'popular', label: 'Popular Search', icon: '/categories/popular.svg' },
-  { key: 'bydisease', label: 'By Disease', icon: '/categories/bydisease.svg' },
-  { key: 'heart-health', label: 'Heart Health', icon: '/categories/heart-health.svg' },
-  { key: 'routine-medicine', label: 'Routine Medicine', icon: '/categories/routine-medicine.svg' },
-  { key: 'diabetes', label: 'Diabetes', icon: '/categories/diabetes.svg' },
-  { key: 'oncology-immune', label: 'Oncology and Immunosuppressants', icon: '/categories/oncology-immune.svg' },
-  { key: 'asthma', label: 'Asthma', icon: '/categories/asthma.svg' },
+  { key: 'a-z',               label: 'Medicine A-Z',                      icon: '/categories/a-z.svg' },
+  { key: 'popular',           label: 'Popular Search',                    icon: '/categories/popular.png' },
+  { key: 'bydisease',         label: 'By Disease',                        icon: '/categories/bydisease.png' },
+  { key: 'heart-health',      label: 'Heart Health',                      icon: '/categories/heart-health.png' },
+  { key: 'routine-medicine',  label: 'Routine Medicine',                  icon: '/categories/routine-medicine.png' },
+  { key: 'diabetes',          label: 'Diabetes',                          icon: '/categories/diabetes.png' },
+  { key: 'oncology-immune',   label: 'Oncology and Immunosuppressants',   icon: '/categories/oncology-immune.png' },
+  { key: 'asthma',            label: 'Asthma',                            icon: '/categories/asthma.png' },
 ];
 
 const promoCards = [
-  { id: 1, image: '/categories/image1.png', alt: 'Promo 1', link: '' },
-  { id: 2, image: '/categories/image2.png', alt: 'Promo 2', link: '' },
-  { id: 3, image: '/categories/image1.png', alt: 'Promo 3', link: '' },
-  { id: 4, image: '/categories/image2.png', alt: 'Promo 4', link: '' },
-  { id: 5, image: '/categories/image1.png', alt: 'Promo 5', link: '' },
-  { id: 6, image: '/categories/image2.png', alt: 'Promo 6', link: '' },
-  { id: 7, image: '/categories/image1.png', alt: 'Promo 7', link: '' },
-  { id: 8, image: '/categories/image2.png', alt: 'Promo 8', link: '' },
-  { id: 9, image: '/categories/image1.png', alt: 'Promo 9', link: '' },
-  { id: 10, image: '/categories/image2.png', alt: 'Promo 10', link: '' },
+  { id: 1,  image: '/categories/image-ads-1.png', alt: 'Promo 1', link: '' },
+  { id: 2,  image: '/categories/image-ads-2.png', alt: 'Promo 2', link: '' },
+  { id: 3,  image: '/categories/image-ads-3.png', alt: 'Promo 3', link: '' },
+  { id: 4,  image: '/categories/image-ads-4.png', alt: 'Promo 4', link: '' },
+  { id: 5,  image: '/categories/image-ads-5.png', alt: 'Promo 5', link: '' },
+  { id: 6,  image: '/categories/image-ads-6.png', alt: 'Promo 6', link: '' },
+  { id: 7,  image: '/categories/image-ads-7.png', alt: 'Promo 7', link: '' },
+  { id: 8,  image: '/categories/image-ads-8.png', alt: 'Promo 8', link: '' },
+  { id: 9,  image: '/categories/image-ads-9.png', alt: 'Promo 9', link: '' },
+  { id: 10, image: '/categories/image-ads-10.png', alt: 'Promo 10', link: '' },
 ];
 
 export default function CategoriesPage() {
@@ -39,13 +39,13 @@ export default function CategoriesPage() {
   const [cardPage, setCardPage] = useState(0);
   const autoPlayRef = useRef();
 
-  const handleIconPrev = () => setIconPage((p) => Math.max(p - 1, 0));
-  const handleIconNext = () => setIconPage((p) => Math.min(p + 1, totalIconPages - 1));
+  const handleIconPrev = () => setIconPage((p) => (p - 1 + totalIconPages) % totalIconPages);
+  const handleIconNext = () => setIconPage((p) => (p + 1) % totalIconPages);
 
-  const visibleIcons = MedicineCategories.slice(
-    iconPage * iconsPerPage,
-    iconPage * iconsPerPage + iconsPerPage
-  );
+  const visibleIcons = Array.from({ length: iconsPerPage }).map((_, i) => {
+    const index = (iconPage * iconsPerPage + i) % MedicineCategories.length;
+    return MedicineCategories[index];
+  })
 
   // Auto-play carousel
   useEffect(() => {
@@ -74,7 +74,6 @@ export default function CategoriesPage() {
           <div className="relative mt-10">
             <button
               onClick={handleIconPrev}
-              disabled={iconPage === 0}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 z-10"
             >
               &#10094;
@@ -87,8 +86,8 @@ export default function CategoriesPage() {
                       src={cat.icon}
                       alt={cat.label}
                       className="object-contain"
-                      width={80}
-                      height={80}
+                      width={90}
+                      height={90}
                     />
                     <span className="mt-2 text-[18px] text-center font-description break-words overflow-hidden">
                       {cat.label}
@@ -99,7 +98,6 @@ export default function CategoriesPage() {
             </div>
             <button
               onClick={handleIconNext}
-              disabled={iconPage === totalIconPages - 1}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 z-10"
             >
               &#10095;
