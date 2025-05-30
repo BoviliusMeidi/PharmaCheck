@@ -11,7 +11,7 @@ export default function MenuBar() {
   const handleClose = () => router.back();
 
   return (
-    <header className="relative">
+    <header className="fixed top-0 left-0 w-full z-50">
       <div className="mx-auto max-w-2xl lg:max-w-7xl flex justify-between items-center mt-5">
         {/* Tombol Kembali */}
         <button

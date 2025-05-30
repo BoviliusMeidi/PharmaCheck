@@ -24,7 +24,7 @@ export default function HomePage ()  {
                     </p>
                 </div>
                 <div className='w-full max-w-4xl'>
-                    <SearchForm title={"Search"} objective={"product"}/>
+                    <SearchForm title={"Cari"} objective={"product"}/>
                 </div>
             </div>
           </div>

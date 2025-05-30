@@ -13,7 +13,7 @@ export default function VerifyPage() {
                     <p className='font-description text-center text-2xl'>Verifikasi semua jenis obat dengan menggunakan kode, nama merek, dan nama generiknya. Memastikan <br /> keaslian dan keamanan dengan informasi terverifikasi dari BPOM dan KEMENKES.</p>
                 </div>
                 <div className='w-full max-w-4xl'>
-                    <SearchForm title={"Verify"} objective={"verify"}/>
+                    <SearchForm title={"Verifikasi"} objective={"verify"}/>
                 </div>
             </div>
         </div>

@@ -6,14 +6,14 @@ import MenuBar from '@/components/MenuBar';
 import Footer from '@/components/Footer';
 
 const MedicineCategories = [
-  { key: 'a-z',               label: 'Medicine A-Z',                      icon: '/categories/a-z.svg' },
-  { key: 'popular',           label: 'Popular Search',                    icon: '/categories/popular.png' },
-  { key: 'bydisease',         label: 'By Disease',                        icon: '/categories/bydisease.png' },
-  { key: 'heart-health',      label: 'Heart Health',                      icon: '/categories/heart-health.png' },
-  { key: 'routine-medicine',  label: 'Routine Medicine',                  icon: '/categories/routine-medicine.png' },
-  { key: 'diabetes',          label: 'Diabetes',                          icon: '/categories/diabetes.png' },
-  { key: 'oncology-immune',   label: 'Oncology and Immunosuppressants',   icon: '/categories/oncology-immune.png' },
-  { key: 'asthma',            label: 'Asthma',                            icon: '/categories/asthma.png' },
+  { key: 'a-z',               label: 'Kategori Obat A-Z',            icon: '/categories/a-z.svg' },
+  { key: 'popular',           label: 'Pencarian Populer',            icon: '/categories/popular.png' },
+  { key: 'bydisease',         label: 'Berdasarkan Penyakit',         icon: '/categories/bydisease.png' },
+  { key: 'heart-health',      label: 'Kesehatan Jantung',            icon: '/categories/heart-health.png' },
+  { key: 'routine-medicine',  label: 'Obat Rutin',                   icon: '/categories/routine-medicine.png' },
+  { key: 'diabetes',          label: 'Diabetes',                     icon: '/categories/diabetes.png' },
+  { key: 'oncology-immune',   label: 'Onkologi dan Imunosupresan',   icon: '/categories/oncology-immune.png' },
+  { key: 'asthma',            label: 'Asma',                         icon: '/categories/asthma.png' },
 ];
 
 const promoCards = [
@@ -67,7 +67,7 @@ export default function CategoriesPage() {
         <MenuBar />
         <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto">
           <h1 className="font-title text-center text-[80px]">
-            Medicine Categories
+            Kategori Obat-Obatan
           </h1>
 
           {/* Icon Slider */}

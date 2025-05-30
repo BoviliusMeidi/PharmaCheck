@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function CategoriesPage() {
   return (
-    <div className="bg-[url('/background/wave-up.svg')] bg-[#FCF7F8] bg-no-repeat bg-contain flex flex-col bg-[#FCF7F8] h-screen overflow-hidden">
+    <div className="bg-[url('/background/wave-up.svg')] bg-no-repeat bg-contain flex flex-col bg-[#FCF7F8] h-screen overflow-hidden">
       <Navbar />
       <div className="flex-1 flex items-center justify-center px-8 max-w-[1083px] mx-auto">
         <div className="w-full">

@@ -6,14 +6,14 @@ import MenuBar from '@/components/MenuBar';
 import Footer from '@/components/Footer';
 
 const nonMedicineCategories = [
-  { key: 'a-z',               label: 'Non-Medicine A-Z',          icon: '/non-categories/a-z.svg' },
-  { key: 'popular',           label: 'Popular Search',            icon: '/non-categories/popular.png' },
-  { key: 'vitamin-suplement', label: 'Vitamins & Supplements',    icon: '/non-categories/vitamin-suplement.png' },
-  { key: 'mom-child',         label: 'Mom & Child',               icon: '/non-categories/mom-child.png' },
-  { key: 'beauty-selfcare',   label: 'Beauty & Self-care',        icon: '/non-categories/beauty-selfcare.png' },
-  { key: 'sexual-health',     label: 'Sexual Health',             icon: '/non-categories/sexual-health.png' },
-  { key: 'milk',              label: 'Milk',                      icon: '/non-categories/milk.png' },
-  { key: 'nasal-care',        label: 'Nasal Care',                icon: '/non-categories/nasal-care.png' },
+  { key: 'a-z',               label: 'Kategori Non-Obat A-Z',           icon: '/non-categories/a-z.svg' },
+  { key: 'popular',           label: 'Pencarian Populer',               icon: '/non-categories/popular.png' },
+  { key: 'vitamin-suplement', label: 'Vitamin & Suplemen',              icon: '/non-categories/vitamin-suplement.png' },
+  { key: 'mom-child',         label: 'Ibu dan Anak',                    icon: '/non-categories/mom-child.png' },
+  { key: 'beauty-selfcare',   label: 'Kecantikan & Perawatan Diri',     icon: '/non-categories/beauty-selfcare.png' },
+  { key: 'sexual-health',     label: 'Kesehatan Seksual',               icon: '/non-categories/sexual-health.png' },
+  { key: 'milk',              label: 'Susu',                            icon: '/non-categories/milk.png' },
+  { key: 'nasal-care',        label: 'Perawatan Hidung',                icon: '/non-categories/nasal-care.png' },
 ];
 
 const promoCards = [
@@ -67,7 +67,7 @@ export default function CategoriesPage() {
         <MenuBar />
         <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto">
           <h1 className="font-title text-center text-[80px]">
-            Non-Medicine Categories
+            Kategori Non-Obat
           </h1>
 
           {/* Icon Slider */}

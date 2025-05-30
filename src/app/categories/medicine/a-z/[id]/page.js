@@ -56,7 +56,9 @@ export default function AZ() {
                 </div>
                 <div className="flex flex-col gap-4 w-full">
                     <h1 className="font-title text-7xl">{`Medicine ${keyword.toUpperCase()} Alphabet`}</h1>
-                    <SearchForm title={'Search'} />
+                    <div className='w-full max-w-4xl'>
+                        <SearchForm title={"Search"} objective={"product"}/>
+                    </div>
                     <div className="grid grid-cols-4 gap-10 p-4">
                         {medicines.map((med) => (
                             <Product key={med.id} data={med} />
