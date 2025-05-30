@@ -1,9 +1,11 @@
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col bg-[#FCF7F8] m-0">
-      <Navbar />
+      <Navbar/>
       <br /><br /><br /><br /><br /><br />
       <div className="flex-1 p-6 px-8 max-w-[1083px] mx-auto">
         <div className="text-black font-title text-[96px] font-normal">
@@ -29,10 +31,25 @@ export default function AboutPage() {
         </div>
         <div className="flex flex-row justify-between items-center w-full max-w-[1083px] gap-8">
           <div className="flex flex-col gap-8">
-            <img src="/aboutUs/Kemenkes Logo.png" alt="Kemenkes Logo" className="w-[617px] h-[162px] mb-8" />
-            <img src="/aboutUs/BPOM Logo.png" alt="BPOM Logo" className="w-[617px] h-[185px]" />
+            <Image 
+              src="/aboutUs/Kemenkes Logo.png" 
+              alt="Kemenkes Logo" 
+              className="object-contain mb-8"
+              width={617}
+              height={162} />
+            <Image 
+              src="/aboutUs/BPOM Logo.png" 
+              alt="BPOM Logo" 
+              className="object-contain"
+              width={617}
+              height={162} />
           </div>
-          <img src="/aboutUs/RS Hermina Mitra Logo.png" alt="RS Hermina Logo" className="w-[371px] h-[371px]" />
+          <Image 
+            src="/aboutUs/RS Hermina Mitra Logo.png" 
+            alt="RS Hermina Logo" 
+            className="object-contain"
+            width={371}
+            height={371} />
         </div>
       </div>
       <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto">
@@ -64,7 +81,12 @@ export default function AboutPage() {
         </div>
         <div className="flex flex-row items-start gap-12 mt-8">
           <div>
-            <img src="/aboutUs/Morales.png" alt="Morales Photo" className="w-[533px] h-[603px] rounded-[20px]" />
+            <Image 
+              src="/aboutUs/Morales.png" 
+              alt="Morales Photo" 
+              className="object-contain rounded-[20px]" 
+              width={533}
+              height={603}/>
           </div>
           <div className="flex-1 flex flex-col">
             <div className="text-black font-description text-[58px] font-extrabold text-justify my-8">
@@ -81,23 +103,39 @@ export default function AboutPage() {
       </div>
       <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto mt-12">
         <div className="text-black font-title text-[80px] font-normal text-center mb-8">
-          AHLI KAMI
+          Team Ahli PharmaCheck
         </div>
         <div className="w-[947px] text-black text-center font-description text-[32px] font-normal mb-16 leading-[1.2]">
           Kami adalah tim yang terdiri dari para ilmuwan, pemikir, dan pakar industri dari mahasiswa Universitas Tarumanagara jurusan IT. 
         </div>
         <div className="w-[1025px] flex justify-center gap-20 mt-8 flex-wrap">
           <div>
-            <img src="/aboutUs/BoviliusMeidi.png" alt="BoviliusMeidi" className="w-[285px] h-[510px] rounded-3xl shadow" />
+            <Image 
+              src="/aboutUs/BoviliusMeidi.png" 
+              alt="BoviliusMeidi" 
+              className="object-contain rounded-3xl shadow"
+              width={285}
+              height={510} />
           </div>
           <div>
-            <img src="/aboutUs/HansThobieSachio.png" alt="HansThobieSachio" className="mt-12 w-[285px] h-[510px] rounded-3xl shadow" />
+            <Image 
+              src="/aboutUs/HansThobieSachio.png" 
+              alt="HansThobieSachio" 
+              className="object-contain mt-12 rounded-3xl shadow" 
+              width={285}
+              height={510}/>
           </div>
           <div>
-            <img src="/aboutUs/JustineDeclan.png" alt="JustineDeclan" className="w-[285px] h-[510px] rounded-3xl shadow" />
+            <Image 
+              src="/aboutUs/JustineDeclan.png" 
+              alt="JustineDeclan" 
+              className="object-contain rounded-3xl shadow"
+              width={285}
+              height={510} />
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

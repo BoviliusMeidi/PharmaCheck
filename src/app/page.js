@@ -85,7 +85,7 @@ export default function HomePage ()  {
             </div>
           </div>
           <div className='h-full w-full flex flex-col gap-12 justify-center my-20 mb-32'>
-            <AccordionItem title="What is Pharma Check?">
+            <AccordionItem title="Apa itu PharmaCheck?">
               <div className="font-header text-3xl mt-4">
                 PharmaCheck adalah alat sederhana dan praktis yang membantu Anda menemukan informasi lengkap dan tepercaya tentang 
                 obat-obatan legal di Indonesia. Baik Anda pengguna biasa, apoteker, atau bahkan dokter - Anda bisa mencari 
@@ -94,7 +94,7 @@ export default function HomePage ()  {
               </div>
             </AccordionItem>
 
-            <AccordionItem title="Are all information and data guaranteed to be correct?">
+            <AccordionItem title="Apakah semua data di PharmaCheck akurat dan sah?">
               <div className="font-header text-3xl mt-4">
                 Kami bekerja keras untuk menjaga semuanya tetap akurat! 
                 Semua data yang Anda lihat di PharmaCheck berasal dari sumber resmi seperti BPOM 
@@ -105,7 +105,7 @@ export default function HomePage ()  {
               </div>
             </AccordionItem>
             
-            <AccordionItem title="How to use Pharma Check?">
+            <AccordionItem title="Bagaimana cara menggunakan PharmaCheck?">
               <div className ="font-header text-3xl mt-4">
                 Sangat mudah! Cukup ketik nama obat - bisa nama merek, nama generik, atau bahkan nomor registrasinya - ke dalam pencarian, 
                 nama generik, atau bahkan nomor registrasi - ke dalam kolom pencarian. 
@@ -115,7 +115,7 @@ export default function HomePage ()  {
               </div>
             </AccordionItem>
 
-            <AccordionItem title="Who are the partners of Pharma Check?">
+            <AccordionItem title="Siapa patner kerja PharmaCheck?">
               <div className="font-header text-3xl mt-4">
                 PharmaCheck bekerja sama dengan lembaga-lembaga tepercaya seperti:
                 <br/>
