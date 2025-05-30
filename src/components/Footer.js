@@ -18,10 +18,10 @@ export default function Footer() {
           <div className="flex flex-col gap-2 w-full">
             <span className="font-lato text-[35px] font-bold text-black">Daftar Halaman</span>
             <div className="flex flex-wrap gap-3 font-lato text-[25px] font-bold text-black">
-              <Link href="/" className="hover:text-[#004E64]">Beranda</Link>
-              <Link href="/about" className="hover:text-[#004E64]">Tentang</Link>
-              <Link href="/verify" className="hover:text-[#004E64]">Verifikasi</Link>
-              <Link href="/categories" className="hover:text-[#004E64]">Kategori</Link>
+              <Link href="/" className="hover:text-[#af9edf]">Beranda</Link>
+              <Link href="/about" className="hover:text-[#af9edf]">Tentang</Link>
+              <Link href="/verify" className="hover:text-[#af9edf]">Verifikasi</Link>
+              <Link href="/categories" className="hover:text-[#af9edf]">Kategori</Link>
             </div>
           </div>
           <p className="text-sm text-gray-500 mt-4">
@@ -34,17 +34,17 @@ export default function Footer() {
           {/* Consumer Complaint Service */}
           <div>
             <h4 className="font-lato text-[35px] font-bold text-black mb-2">Layanan Keluhan Konsumen</h4>
-            <div className="flex flex-col gap-16 font-lato text-[25px] font-regular text-black ">
+            <div className="flex flex-col gap-16 font-lato text-[20px] font-regular text-black ">
               <div>
-                <p className="leading-[100%] mb-4">
+                <p className="leading-[100%] mb-4" align="left">
                   Rumah Sakit Hermina Podomoro.<br/>
                   Blok E 3, Jl. Danau Agung 2 No.28 - 30, RT.3/RW.16,<br />
                   Sunter Agung, Kec. Tj. Priok, Jkt Utara,<br />
                   Daerah Khusus Ibukota Jakarta 14350
                 </p>
-                <p className="leading-[100%]">
-                  Layanan Pengaduan BPOM <br />
-                  Jalan Percetakan Negara Nomor 23 <br />
+                <p className="leading-[100%]" align="right">
+                  Layanan Pengaduan BPOM <br/>
+                  Jalan Percetakan Negara Nomor 23 <br/>
                   Jakarta - 10560 - Indonesia (HaloBPOM 1500533)
                 </p>
               </div>

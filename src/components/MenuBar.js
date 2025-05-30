@@ -1,67 +1,76 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { BiMenu, BiX } from 'react-icons/bi';
 
 export default function MenuBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
 
-  const handleClose = () => {
-    router.back()
-  };
+  const handleClose = () => router.back();
 
   return (
-    <div className="relative bg-[#FCF7F8]">
-      <div className="flex justify-between items-center px-10 py-4">
+    <header className="relative">
+      <div className="mx-auto max-w-2xl lg:max-w-7xl flex justify-between items-center mt-5">
+        {/* Tombol Kembali */}
         <button
-          className="text-black text-[40px] font-normal"
           onClick={handleClose}
+          aria-label="Kembali"
+          className="text-gray-800 hover:text-pink-600 transition-colors"
         >
-          x
+          <BiX size={40} />
         </button>
-        <div className="flex items-center gap-8">
-          <div className="flex w-[208px] h-[56px] rounded-[40px] bg-white shadow-md overflow-hidden">
-            <button className="flex items-center gap-2 px-[14px] py-[8px] rounded-[40px] text-black text-[24px] font-semibold font-description transition-colors">
-              <img
-                src="/USA Flag.png"
-                alt="US Flag"
-                className="w-[24px] h-auto object-contain"
-              />{' '}
-              ENG
-            </button>
-            <button className="flex items-center gap-2 px-[14px] py-[8px] rounded-[40px] bg-[#c7f5f0] text-black text-[24px] font-semibold font-description transition-colors">
-              <img
-                src="/Indonesia Flag.png"
-                alt="ID Flag"
-                className="w-[24px] h-auto object-contain"
-              />{' '}
-              IND
-            </button>
-          </div>
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-black text-[36px] font-bold focus:outline-none"
-          >
-            ☰
-          </button>
-        </div>
+
+        {/* Toggle Menu */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          className="text-gray-800 hover:text-pink-600 transition-colors focus:outline-none"
+        >
+          {menuOpen ? <BiX size={40} /> : <BiMenu size={40} />}
+        </button>
       </div>
+
+      {/* Overlay */}
       {menuOpen && (
-        <div className="absolute top-[70px] right-6 bg-white rounded shadow-md p-4 flex flex-col gap-2 z-50">
-          <a href="/" className="text-lg font-medium hover:text-blue-500">
-            Beranda
-          </a>
-          <a href="/about" className="text-lg font-medium hover:text-blue-500">
-            Tentang
-          </a>
-          <a href="/verify" className="text-lg font-medium hover:text-blue-500">
-            Verifikasi
-          </a>
-          <a href="/categories" className="text-lg font-medium hover:text-blue-500">
-            Kategori
-          </a>
-        </div>
+        <div
+          onClick={() => setMenuOpen(false)}
+          className="fixed inset-0 bg-black/20 z-40"
+        />
       )}
-    </div>
+
+      {/* Side Menu (fit-content height) */}
+      <nav
+        className={`
+          fixed top-16 right-0 w-64 bg-white/90 backdrop-blur-lg
+          transform ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
+          transition-transform duration-300 ease-in-out
+          shadow-xl z-50 flex flex-col p-6
+          h-auto
+        `}
+      >
+        {[
+          { label: 'Beranda',    href: '/' },
+          { label: 'Tentang',    href: '/about' },
+          { label: 'Verifikasi', href: '/verify' },
+          { label: 'Kategori',   href: '/categories' },
+        ].map(({ label, href }) => (
+          <Link
+            key={label}
+            href={href}
+            onClick={() => setMenuOpen(false)}
+            className="
+              mb-4 text-lg font-semibold font-sans text-gray-800
+              hover:text-blue-soft hover:border-l-4 hover:pl-2
+              border-transparent border-l-4 transition-all duration-200
+            "
+          >
+            {label}
+          </Link>
+        ))}
+      </nav>
+    </header>
   );
 }

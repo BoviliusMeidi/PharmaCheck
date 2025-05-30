@@ -9,45 +9,61 @@ import Image from 'next/image';
 
 export default function HomePage ()  {
     return (
-        <div className="flex flex-col bg-[#FCF7F8] p-0 m-0 w-full">
-          <Navbar/>
+        <div className="flex flex-col bg-[#FCF7F8] w-full">
           <div className="bg-[url('/background/wave-up.svg')] bg-[#FCF7F8] bg-no-repeat bg-contain">
-            <div className="h-screen flex flex-col justify-center items-center gap-[44]">
+           <Navbar/>
+            <div className="h-screen flex flex-col justify-center items-center gap-[40] mb-0">
                 <div className='flex flex-col gap-[16]'>
                     <h1 className='font-title text-center text-8xl'>Temukan Obat Anda</h1>
-                    <p className='font-description text-center text-2xl'>Temukan informasi obat yang lengkap dan akurat! Gunakan pencarian ini untuk mendapatkan penjelasan terperinci, <br></br>memverifikasi keaslian, dan memastikan keamanan obat di seluruh dunia dari sumber tepercaya.</p>
+                    <p className='font-description text-center text-2xl'>
+                      Temukan informasi obat yang lengkap dan akurat! Gunakan pencarian ini 
+                      untuk mendapatkan penjelasan terperinci, 
+                      <br></br>
+                      memverifikasi keaslian, dan memastikan keamanan 
+                      obat di seluruh dunia dari sumber tepercaya.
+                    </p>
                 </div>
                 <div className='w-full max-w-4xl'>
                     <SearchForm title={"Search"} objective={"product"}/>
                 </div>
             </div>
           </div>
-          <div className="w-full flex justify-center items-center py-15">
-            <div className="grid grid-cols-2 max-w-5xl w-full">
-              <Link href="/verify">
-                <div className="h-[615px] w-[490px] bg-[url('/icon/vermed.png')] bg-[#fdfdfd] bg-no-repeat bg-top bg-[length:450px_450px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-center group">
-                  <h2 className="font-lato text-[64px]  font-bold text-black transition-colors duration-300">
-                    Verifikasi Obat Anda
-                  </h2>
-                </div>
-              </Link>
-              
-              <div className="flex flex-col gap-8 justify-start items-center">
-                <Link href="/categories/medicine">
-                  <div className="h-[370px] w-[490px] bg-[url('/icon/medcat.png')] bg-[#fdfdfd] bg-no-repeat bg-top bg-[length:244.27px_256.52px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-center group">
-                    <h2 className="font-lato text-[45px] font-bold text-black transition-colors duration-300">
-                      Kategori Obat
+          <div className="relative bg-[#FCF7F8] pt-12">
+            {/* Background wave */}
+            <Image
+              src="/background/wave-bottom.svg"
+              alt="wave background"
+              style={{ objectFit: 'cover', objectPosition: 'bottom' }}
+              priority
+              fill
+            />
+            <div className="relative z-10 w-full flex justify-center items-center py-12">
+              <div className="grid grid-cols-2 max-w-5xl w-full">
+                <Link href="/verify">
+                  <div className="h-[615px] w-[490px] bg-[url('/icon/vermed.png')] bg-[#fdfdfd] bg-no-repeat bg-top bg-[length:450px_450px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-center group">
+                    <h2 className="font-lato text-[64px]  font-bold text-black transition-colors duration-300">
+                      Verifikasi Obat Anda
                     </h2>
                   </div>
                 </Link>
+                
+                <div className="flex flex-col gap-8 justify-start items-center">
+                  <Link href="/categories/medicine">
+                    <div className="h-[370px] w-[490px] bg-[url('/icon/medcat.png')] bg-[#fdfdfd] bg-no-repeat bg-top bg-[length:244.27px_256.52px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-center group">
+                      <h2 className="font-lato text-[45px] font-bold text-black transition-colors duration-300">
+                        Kumpulan Obat
+                      </h2>
+                    </div>
+                  </Link>
 
-                <Link href="/categories/non-medicine">
-                  <div className="h-[210px] w-[490px] bg-[url('/icon/nonmedcat.png')] bg-[#fdfdfd] bg-no-repeat bg-[position:80px_center]  bg-[length:137px_137px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-end group">
-                    <h2 className="w-[180px] font-lato text-[30px] font-bold text-black transition-colors duration-300">
-                      Bukan Obat-obatan
-                    </h2>
-                  </div>
-                </Link>
+                  <Link href="/categories/non-medicine">
+                    <div className="h-[210px] w-[490px] bg-[url('/icon/nonmedcat.png')] bg-[#fdfdfd] bg-no-repeat bg-[position:80px_center]  bg-[length:137px_137px] border-2 border-black rounded-[24px] p-6 shadow-md hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-end justify-end group">
+                      <h2 className="w-[180px] font-lato text-[30px] font-bold text-black transition-colors duration-300">
+                        Kumpulan Non Obat
+                      </h2>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
