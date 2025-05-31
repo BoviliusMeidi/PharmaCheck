@@ -7,6 +7,7 @@ import AccordionItem from '@/components/AccordionItem';
 import LoadingSpinner from './LoadingSpinner';
 import { fetchMedicineAuto } from '@/lib/fetchMedicine';
 import { stripTags, capitalizeWords } from '@/lib/utils';
+import Footer from '@/components/Footer';
 
 export default function ProductDetailResult () {
   const params = useParams();
@@ -41,7 +42,7 @@ export default function ProductDetailResult () {
     <div>
       {product.api ? (
         <div>
-          <div className='h-screen flex flex-col justify-center items-center'>
+          <div className='bg-white h-screen flex flex-col justify-center items-center'>
             <h1 className='font-header text-7xl font-extrabold normal-case mb-12'>{capitalizeWords(product.api.nama_dagang)}</h1>
             <Image src={product.db?.image_url || '/Medicine.png'} width={product.db?.image_url ? 350 : 160}
               height={product.db?.image_url ? 350 : 160} alt='Valid Medicine' className="rotate-6 mb-6" />
@@ -54,7 +55,7 @@ export default function ProductDetailResult () {
               <Image src="/Logo.png" width={300} height={200} alt='Logo Pharma Check' className="" />
             </div>
           </div>
-          <div className='h-full w-full flex flex-col gap-12 justify-center my-20 mb-32'>
+          <div className='bg-white h-full w-full flex flex-col gap-12 justify-center'>
             <AccordionItem title="Description">
               <div
                 className="font-header text-3xl mt-4"
@@ -90,9 +91,19 @@ export default function ProductDetailResult () {
               />
             </AccordionItem>
           </div>
+          
         </div>
       ) : (
-        <p>Tidak ada data yang ditemukan atau mencari...</p>
+        <div className="h-screen flex flex-col justify-center items-center text-center gap-12 px-4">
+          <h1 className="font-title text-7xl">
+            Obat Yang Anda Cari Belum <br /> Memiliki Informasi yang Lengkap
+          </h1>
+          <p className="font-header text-2xl">
+            Silahkan tunggu perkembangannya dan gunakan pencarian obat informasi yang lain<br />
+            Gunakan nama obat, kode, atau bentuk lainnya untuk mencari informasi yang lebih lengkap.
+          </p>
+          <Image src="/NotSmile.png" width={250} height={250} alt="Not Valid and Legal" />
+        </div>
       )}
     </div>
   );

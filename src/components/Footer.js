@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[url('/background/green-wave-bot.svg')] bg-[#FCF7F8] bg-no-repeat bg-cover">
+    <footer className="w-full bg-[url('/background/green-wave-bot.svg')] bg-transparent bg-no-repeat bg-cover">
       <div className="max-w-[80%] mx-auto flex flex-col lg:flex-row lg:space-x-24 mt-20 mb-5 lg:items-center">
-        <div className="flex flex-col gap-6 w-full ">
+        <div className="flex flex-col gap-6 w-full">
           <Image
             src="/logo.png"
             alt="PharmaCheck Logo"
@@ -21,7 +21,7 @@ export default function Footer() {
               <Link href="/" className="hover:text-[#af9edf]">Beranda</Link>
               <Link href="/about" className="hover:text-[#af9edf]">Tentang</Link>
               <Link href="/verify" className="hover:text-[#af9edf]">Verifikasi</Link>
-              <Link href="/categories" className="hover:text-[#af9edf]">Kategori</Link>
+              <Link href="/categories" className="hover:text-[#af9edf]">Kategori</Link> 
             </div>
           </div>
           <p className="text-sm text-gray-500 mt-4">
