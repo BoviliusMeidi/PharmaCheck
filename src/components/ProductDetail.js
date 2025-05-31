@@ -7,7 +7,7 @@ import AccordionItem from '@/components/AccordionItem';
 import LoadingSpinner from './LoadingSpinner';
 import { fetchMedicineAuto } from '@/lib/fetchMedicine';
 import { stripTags, capitalizeWords } from '@/lib/utils';
-import Footer from '@/components/Footer';
+import FooterProduct from '@/components/FooterProduct';
 
 export default function ProductDetailResult () {
   const params = useParams();
@@ -94,7 +94,7 @@ export default function ProductDetailResult () {
           
         </div>
       ) : (
-        <div className="h-screen flex flex-col justify-center items-center text-center gap-12 px-4">
+        <div className="bg-white h-screen flex flex-col justify-center items-center text-center gap-12 px-4">
           <h1 className="font-title text-7xl">
             Obat Yang Anda Cari Belum <br /> Memiliki Informasi yang Lengkap
           </h1>
@@ -105,6 +105,7 @@ export default function ProductDetailResult () {
           <Image src="/NotSmile.png" width={250} height={250} alt="Not Valid and Legal" />
         </div>
       )}
-    </div>
+        <FooterProduct />
+  </div>
   );
 };
