@@ -5,9 +5,8 @@ import Image from 'next/image';
 
 export default function FooterProduct() {
   return (
-    <footer className="w-full bg-white">
+    <footer className="w-full bg-white bg-[url('/background/green-wave-bot.svg')] bg-no-repeat bg-cover pt-35">
       {/* Wrapper hijau + wave, dengan padding agar teks tetap di dalam gelombang */}
-      <div className="bg-[url('/background/green-wave-bot.svg')] bg-no-repeat bg-top bg-contain pt-35 pb-5">
         <div className="max-w-[80%] mx-auto flex flex-col lg:flex-row lg:space-x-24">
           {/* Kiri */}
           <div className="flex flex-col gap-6 w-full">
@@ -46,7 +45,7 @@ export default function FooterProduct() {
                     Sunter Agung, Kec. Tj. Priok, Jkt Utara,<br />
                     Daerah Khusus Ibukota Jakarta 14350
                   </p>
-                  <p className="leading-[100%]" align="left">
+                  <p className="leading-[100%]" align="right">
                     Layanan Pengaduan BPOM<br/>
                     Jalan Percetakan Negara Nomor 23<br />
                     Jakarta - 10560 - Indonesia (HaloBPOM 1500533)
@@ -82,7 +81,6 @@ export default function FooterProduct() {
             </div>
           </div>
         </div>
-      </div>
     </footer>
   );
 }
