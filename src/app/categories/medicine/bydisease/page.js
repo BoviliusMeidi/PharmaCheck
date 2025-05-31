@@ -8,17 +8,17 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Cough, Cold & Flu',      icon: '/categories/ByDisease/CCF01.png',    href: '' },
-  { id: 2, title: 'Digestive Problem',      icon: '/categories/ByDisease/BD01.png',     href: '' },
-  { id: 3, title: 'THT Problem',            icon: '/categories/ByDisease/THT01.png',    href: '' },
-  { id: 4, title: 'Skin Condition',         icon: '/categories/ByDisease/SC01.png',     href: '' },
-  { id: 5, title: 'Bones & Joints',         icon: '/categories/ByDisease/BJ01.png',     href: '' },
-  { id: 6, title: 'Allergies',              icon: '/categories/ByDisease/AL01.png',     href: '' },
-  { id: 7, title: 'Fever and Pain',         icon: '/categories/ByDisease/FP01.png',     href: '' },
-  { id: 8, title: 'Eyes Problem',           icon: '/categories/ByDisease/EP01.png',     href: '' },
-  { id: 9, title: 'Infection',              icon: '/categories/ByDisease/IF01.png',     href: '' },
-  { id: 10, title: 'Fertility and More',    icon: '/categories/ByDisease/FM01.png',     href: '' },
-  { id: 11, title: 'Other Medicines',       icon: '/categories/ByDisease/OM01.png',     href: '' },
+  { id: 1, title: 'Cough, Cold & Flu',      icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Cough and Flu' },
+  { id: 2, title: 'Digestive Problem',      icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Digestive Problems' },
+  { id: 3, title: 'THT Problem',            icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/THT Problems' },
+  { id: 4, title: 'Skin Condition',         icon: '/categories/ByDisease/SC01.png',     href: '/categories/medicine/categories/Skin Condition' },
+  { id: 5, title: 'Bones & Joints',         icon: '/categories/ByDisease/BJ01.png',     href: '/categories/medicine/categories/Bones & Joints' },
+  { id: 6, title: 'Allergies',              icon: '/categories/ByDisease/AL01.png',     href: '/categories/medicine/categories/Allergies' },
+  { id: 7, title: 'Fever and Pain',         icon: '/categories/ByDisease/FP01.png',     href: '/categories/medicine/categories/Fever and Pain' },
+  { id: 8, title: 'Eyes Problem',           icon: '/categories/ByDisease/EP01.png',     href: '/categories/medicine/categories/Eye Problem' },
+  { id: 9, title: 'Infection',              icon: '/categories/ByDisease/IF01.png',     href: '/categories/medicine/categories/Infection' },
+  { id: 10, title: 'Fertility and More',    icon: '/categories/ByDisease/FM01.png',     href: '/categories/medicine/categories/Fertility and More' },
+  { id: 11, title: 'Other Medicines',       icon: '/categories/ByDisease/OM01.png',     href: '/categories/medicine/categories/Other Medicine' },
 ];
 
 export default function ByDiseasePage() {

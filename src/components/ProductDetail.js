@@ -8,6 +8,7 @@ import LoadingSpinner from './LoadingSpinner';
 import { fetchMedicineAuto } from '@/lib/fetchMedicine';
 import { stripTags, capitalizeWords } from '@/lib/utils';
 import FooterProduct from '@/components/FooterProduct';
+import MenuBar from './MenuBar';
 
 export default function ProductDetailResult () {
   const params = useParams();
@@ -42,6 +43,7 @@ export default function ProductDetailResult () {
     <div>
       {product.api ? (
         <div>
+          <MenuBar />
           <div className='bg-white h-screen flex flex-col justify-center items-center'>
             <h1 className='font-header text-7xl font-extrabold normal-case mb-12'>{capitalizeWords(product.api.nama_dagang)}</h1>
             <Image src={product.db?.image_url || '/Medicine.png'} width={product.db?.image_url ? 350 : 160}
@@ -56,13 +58,13 @@ export default function ProductDetailResult () {
             </div>
           </div>
           <div className='bg-white h-full w-full flex flex-col gap-12 justify-center'>
-            <AccordionItem title="Description">
+            <AccordionItem title="Deskripsi">
               <div
                 className="font-header text-3xl mt-4"
                 dangerouslySetInnerHTML={{ __html: stripTags(product.api.description) }}
               />
             </AccordionItem>
-            <AccordionItem title="Dosage">
+            <AccordionItem title="Dosis">
               {Array.isArray(product.api.dosage_usage) &&
                 product.api.dosage_usage.map((item, index) => (
                   <div
@@ -72,19 +74,19 @@ export default function ProductDetailResult () {
                   />
                 ))}
             </AccordionItem>
-            <AccordionItem title="Side Effects">
+            <AccordionItem title="Efek Samping">
               <div
                 className="font-header text-3xl mt-4"
                 dangerouslySetInnerHTML={{ __html: stripTags(product.api.side_effect) }}
               />
             </AccordionItem>
-            <AccordionItem title="Warnings">
+            <AccordionItem title="Peringatan Penggunaan">
               <div
                 className="font-header text-3xl mt-4"
                 dangerouslySetInnerHTML={{ __html: stripTags(product.api.warning) }}
               />
             </AccordionItem>
-            <AccordionItem title="Interaction">
+            <AccordionItem title="Interaksi Obat">
               <div
                 className="font-header text-3xl mt-4"
                 dangerouslySetInnerHTML={{ __html: stripTags(product.api.indication) }}

@@ -8,18 +8,18 @@ import Footer from '@/components/Footer';
 
 export default function PopularPage() {
   const popularItems = [
-    { name: 'Telfast Plus', href: '' },
-    { name: 'OBH Combi', href: '' },
-    { name: 'Panadol Extra', href: '' },
-    { name: 'Paracetamol', href: '' },
-    { name: 'Sanmol Forte', href: '' },
-    { name: 'Sanmol', href: '' },
-    { name: 'Tempra Drops', href: '' },
-    { name: 'Naprex Sirup', href: '' },
-    { name: 'Ottopan Drops', href: '' },
-    { name: 'Tempra Forte', href: '' },
-    { name: 'Tempra Sirup', href: '' },
-    { name: 'Lanos Drops', href: '' },
+    { name: 'Telfast Plus',       href: '/product/telfast' },
+    { name: 'Epexol',             href: '/product/epexol' },
+    { name: 'Panadol Extra',      href: '/product/panadol extra' },
+    { name: 'Paracetamol',        href: '/product/paracetamol' },
+    { name: 'Mucos Drops',        href: '/product/mucos drops' },
+    { name: 'Stinopi 10 Kaplet',  href: '/product/stinopi' },
+    { name: 'Tempra Drops',       href: '/product/tempra drops' },
+    { name: 'Naprex Sirup',       href: '/product/naprex sirup' },
+    { name: 'Ottopan Drops',      href: '/product/ottopan drops' },
+    { name: 'Tempra Forte',       href: '/product/tempra forte' },
+    { name: 'Tempra Sirup',       href: '/product/tempra sirup' },
+    { name: 'Lanos Drops',        href: '/product/lanos drops' },
   ];
 
   return (

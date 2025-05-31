@@ -8,19 +8,22 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Heart Medication',               icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Heart Medication' },
-  { id: 2, title: 'Monitoring and Management',      icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
-  { id: 3, title: 'Vitamins & Supplements',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 1, title: 'Hormon Wanita',            icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Heart & Immune' },
+  { id: 2, title: 'Disfungsi Ereksi',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
+  { id: 3, title: 'Perawtan Kewanitaan',      icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 4, title: 'Test Pack',                icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 5, title: 'Kontrasepsi Oral',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 6, title: 'Kondom & Pelumas',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
 ];
 
-export default function RoutineMedicinePage() {
+export default function SexualHealthPage() {
   return (
     <div className="relative bg-[#FCF7F8] min-h-screen flex flex-col">
         <div className="bg-[url('/background/wave-up.svg')] bg-[#FCF7F8] bg-no-repeat bg-contain">
         <MenuBar />
         <div className="flex-1 flex justify-center px-8">
           <div className="py-10 px-8 max-w-[1083px] text-center">
-            <h1 className="font-title text-[80px]">Obat Rutin</h1>
+            <h1 className="font-title text-[80px]">Kesehatan Seksual</h1>
             <p className="text-black mx-auto font-description text-[25px] mb-16 leading-[1.2]">
               Informasi yang detail dan akurat disediakan untuk lebih dari 24.000 
               obat resep dan obat bebas untuk konsumen maupun tenaga kesehatan.

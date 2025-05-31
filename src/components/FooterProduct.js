@@ -5,8 +5,7 @@ import Image from 'next/image';
 
 export default function FooterProduct() {
   return (
-    <footer className="w-full bg-white bg-[url('/background/green-wave-bot.svg')] bg-no-repeat bg-cover pt-35">
-      {/* Wrapper hijau + wave, dengan padding agar teks tetap di dalam gelombang */}
+    <footer className="w-full bg-white bg-[url('/background/green-wave-bot.svg')] bg-no-repeat bg-cover pt-25">
         <div className="max-w-[80%] mx-auto flex flex-col lg:flex-row lg:space-x-24">
           {/* Kiri */}
           <div className="flex flex-col gap-6 w-full">
@@ -15,7 +14,7 @@ export default function FooterProduct() {
               alt="PharmaCheck Logo"
               width={300}
               height={200}
-              className="object-contain"
+              className="object-contain" 
             />
             <div className="flex flex-col gap-2 w-full">
               <span className="font-lato text-[35px] font-bold text-black">Daftar Halaman</span>

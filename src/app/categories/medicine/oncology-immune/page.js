@@ -13,14 +13,14 @@ const categories = [
   { id: 3, title: 'Vitamins & Supplements',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
 ];
 
-export default function RoutineMedicinePage() {
+export default function OnkologiImunosupresanPage() {
   return (
     <div className="relative bg-[#FCF7F8] min-h-screen flex flex-col">
         <div className="bg-[url('/background/wave-up.svg')] bg-[#FCF7F8] bg-no-repeat bg-contain">
         <MenuBar />
         <div className="flex-1 flex justify-center px-8">
           <div className="py-10 px-8 max-w-[1083px] text-center">
-            <h1 className="font-title text-[80px]">Obat Rutin</h1>
+            <h1 className="font-title text-[80px]">Onkologi & Imunosupresan</h1>
             <p className="text-black mx-auto font-description text-[25px] mb-16 leading-[1.2]">
               Informasi yang detail dan akurat disediakan untuk lebih dari 24.000 
               obat resep dan obat bebas untuk konsumen maupun tenaga kesehatan.

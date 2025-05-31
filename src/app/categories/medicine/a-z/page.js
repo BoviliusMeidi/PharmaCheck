@@ -9,7 +9,7 @@ export default function AZPage() {
     return (
         <div className="relative bg-[#FCF7F8] m-0 min-h-screen flex flex-col">
             <div className="bg-[url('/background/wave-up.svg')] bg-no-repeat bg-contain flex flex-col bg-[#FCF7F8]">
-                
+                <MenuBar />
                 <div className="flex-1 flex justify-center px-8">
                     <div className="py-10 px-8 max-w-[1083px] text-center pb-5">
                         <div className='font-title text-[80px]'>Kategori Obat A-Z</div>

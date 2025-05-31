@@ -10,6 +10,7 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 import Product from "@/components/Product";
 import Footer from "@/components/Footer";
 import MenuBar from '@/components/MenuBar';
+import CategoryTable2 from "@/components/CategoryTable2";
 
 export default function CategoriesResult() {
     const params = useParams();
@@ -74,7 +75,7 @@ export default function CategoriesResult() {
             <div className="p-20 bg-[url('/background/wave-up.svg')] bg-no-repeat z-10 bg-contain flex flex-col">
                 <div className="flex flex-row gap-8">
                     <div className="w-1/3">
-                        <CategoryTable title={'Kategori Obat'} />
+                        <CategoryTable2 title={'Kategori Non-Obat'} />
                     </div>
                     <div className="flex flex-col gap-4 w-full">
                         <h1 className="font-title text-7xl">{categoryTitle}</h1>

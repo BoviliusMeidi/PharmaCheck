@@ -2,8 +2,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-export default function CategoryTable({ title }) {
-  const [openedCategory, setOpenedCategory] = useState("ByDisease");
+export default function CategoryTable2({ title }) {
+  const [openedCategory, setOpenedCategory] = useState("VitaminSuplement");
 
   const handleToggle = (category) => {
     setOpenedCategory((prev) => (prev === category ? null : category));
@@ -24,59 +24,6 @@ export default function CategoryTable({ title }) {
         "Constipation & Hemorrhoids", 
         "Nausea and Vomiting",
         "Worm Infections"
-        ],
-      "THT Problem":[
-        "Mouth Ulcers & Herpes", 
-        "Antiseptic Mouthwash", 
-        "Throat Lozenges", 
-        "Ear Drops", 
-        "Nasal Hygiene"
-        ],
-      "Skin Condition":[
-        "Acne", 
-        "Skin Infections", 
-        "Dermatitis & Eczema", 
-        "Others Skin Medicine"
-        ],
-      "Bones and Joints":[
-        "Bone and Osteoporosis", 
-        "Muscle Relaxant", 
-        "Gout & Arthritis", 
-        "Balms & Oils"
-        ],
-      "Allergies":[
-        "Allergy Remedies", 
-        "Itch Relief"
-        ],
-      "Fever and Pain":[
-        "Fever and Pain Relief", 
-        "Heat and Cold Therapy", 
-        "Infants and Children", 
-        "Herbal Treatments"
-        ],
-      "Eyes Problem":[
-        "Itchy, Dry and Red", 
-        "More Eyes Problem"
-        ],
-      "Infection":[
-        "Antibiotic", 
-        "Antivirus", 
-        "Antifungal"
-        ],
-      "Fertility and More":[
-        "Bladder and Kidney", 
-        "Women", 
-        "Men", 
-        "Contraceptive Pills", 
-        "Other Fertility"
-        ],
-      "Other Medicines":[
-        "Anti Inflammatory", 
-        "Sleep Disorders", 
-        "Blood Disorders", 
-        "Brain and Nerves", 
-        "Mental Health", 
-        "Other Medicine"
         ],
     },  
   };

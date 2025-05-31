@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[url('/background/green-wave-bot.svg')] bg-no-repeat bg-cover bg-white ">
+    <footer className="w-full bg-[url('/background/green-wave-bot.svg')] bg-no-repeat bg-cover bg-[#FCF7F8]  ">
       <div className="max-w-[80%] mx-auto flex flex-col lg:flex-row lg:space-x-24 mt-20 mb-5 lg:items-center">
         <div className="flex flex-col gap-6 w-full">
           <Image
