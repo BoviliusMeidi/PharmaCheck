@@ -8,9 +8,9 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Heart Medication',               icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Heart Medication' },
-  { id: 2, title: 'Monitoring and Management',      icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
-  { id: 3, title: 'Vitamins & Supplements',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 1, title: 'Obat Asma',       icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Heart Medication' },
+  { id: 2, title: 'Perawatan Asma',  icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
+  { id: 3, title: 'Inhaler',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
 ];
 
 export default function AsthmaPage() {
