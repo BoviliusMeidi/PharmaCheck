@@ -10,7 +10,7 @@ import Image from 'next/image';
 const categories = [
   { id: 1, title: 'Susu Dewasa',          icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Susu Dewasa' },
   { id: 2, title: 'Bayi dan Anak',        icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Bayi dan Anak' },
-  { id: 3, title: 'Susu Medis Khusus',    icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Susu Medis Khusus' },
+  { id: 3, title: 'Susu Medis Khusus',    icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Susu Spesial' },
   { id: 4, title: 'Lainnya',              icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Lainnya' },
 
 ];

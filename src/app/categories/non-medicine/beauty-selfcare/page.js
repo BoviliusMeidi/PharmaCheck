@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const categories = [
   { id: 1, title: 'Perawatan Jerawat',            icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Perawatan Jerawat' },
-  { id: 2, title: 'Kosmetik dan Kecantikan',      icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Kosmetik dan Kecantikan' },
+  { id: 2, title: 'Kosmetik dan Kecantikan',      icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Kosmetik & Kecantikan' },
   { id: 3, title: 'Eksim',                        icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Eksim' },
   { id: 4, title: 'Perawatan Pria',               icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Perawatan Pria' },
   { id: 5, title: 'Perawatan Diri',               icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Perawatan Diri' },

@@ -8,12 +8,12 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Bayi dan Anak',             icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Bayi dan Anak' },
+  { id: 1, title: 'Bayi dan Anak',             icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Bayi & Anak' },
   { id: 2, title: 'Nutrisi',                   icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Nutrisi' },
-  { id: 3, title: 'Kehamilan dan Menyusui',    icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Kehamilan dan Menyusui' },
-  { id: 4, title: 'Popok dan Tisu Basah',      icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Popok dan Tisu Basah' },
+  { id: 3, title: 'Kehamilan dan Menyusui',    icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Kehamilan & Menyusui' },
+  { id: 4, title: 'Popok dan Tisu Basah',      icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Popok & Tisu Basah' },
   { id: 5, title: 'Kesehatan Bayi & Anak',     icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Kesehatan Bayi & Anak' },
-  { id: 6, title: 'Lainnya',                   icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Lainnya' },
+  { id: 6, title: 'Lainnya',                   icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Lainnya Ibu & Anak' },
 
 ];
 

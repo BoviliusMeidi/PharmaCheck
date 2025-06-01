@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const categories = [
   { id: 1, title: 'Hormon Wanita',            icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Hormon Wanita' },
-  { id: 2, title: 'Disfungsi Ereksi',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Disfungsi Ereksi' },
+  { id: 2, title: 'Disfungsi Ereksi',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Disfungsional Ereksi' },
   { id: 3, title: 'Perawatan Kewanitaan',      icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Perawatan Kewanitaan' },
   { id: 4, title: 'Test Pack',                icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Test Pack' },
   { id: 5, title: 'Kontrasepsi Oral',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Kontrasepsi Oral' },
