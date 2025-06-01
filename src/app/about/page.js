@@ -54,7 +54,7 @@ export default function AboutPage() {
                 height={371} />
             </div>
           </div>
-        <div className="relative bg-[#FCF7F8] pt-12">
+        <div className="relative bg-[#FCF7F8] bg-cover pb-20">
           {/* Background wave */}
           <Image
             src="/background/wave-bottom.svg"
@@ -64,7 +64,6 @@ export default function AboutPage() {
             fill
           />
 
-          {/* Konten tetap terbatas max-w dan di atas wave */}
           <div className="relative flex-1 px-8 max-w-[1083px] mx-auto text-black z-10">
             <div className="font-title text-[80px] font-normal mb-8">
               Layanan Keluhan Konsumen
