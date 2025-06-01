@@ -104,13 +104,13 @@ export default function AboutPage() {
                   height={603}/>
               </div>
               <div className="flex-1 flex flex-col">
-                <div className="text-black font-description text-[58px] font-extrabold text-justify my-8">
-                  Morales S.Farm
+                <div className="text-black font-description text-[45px] font-extrabold text-justify my-5">
+                  Apt. Morales S.Farm
                 </div>
-                <div className="text-[32px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
+                <div className="text-[28px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
                   Mitra kami adalah apoteker dari rumah sakit hermina podomoro di bidang pelayanan kesehatan yang sudah berpengalaman dan mengerti tentang obat-obatan.
                 </div>
-                <div className="text-[32px] font-description font-normal text-black text-justify mb-8 leading-[1.2]">
+                <div className="text-[28px] font-description font-normal text-black text-justify leading-[1.2]">
                   Dengan bantuan Morales, kami dapat menjamin dan menambahkan informasi pada data dan penjelasan obat.
                 </div>
               </div>
