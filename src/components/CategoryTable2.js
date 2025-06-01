@@ -12,168 +12,168 @@ export default function CategoryTable2({ title }) {
   const categories = {
     VitaminDanSuplemen: {
       "Kesehatan Dan Imun":[   
-        "- Vitamin A, B & E", 
-        "- Vitamin D", 
-        "- Vitamin C", 
-        "- Multivitamin", 
-        "- Mineral"
+        "Vitamin A, B & E", 
+        "Vitamin D", 
+        "Vitamin C", 
+        "Multivitamin", 
+        "Mineral"
         ],
       "Bayi dan Anak":[
-        "- Multivitamin Anak", 
-        "- Imun Booster", 
-        "- Anemia untuk Anak", 
-        "- Penambah Nafsu Makan",
+        "Multivitamin Anak", 
+        "Imun Booster", 
+        "Anemia untuk Anak", 
+        "Penambah Nafsu Makan",
         ],
       "Vitamin Pria":[
-        "- Kesehatan Prostata", 
-        "- Vitalitas & Stamina", 
+        "Kesehatan Prostata", 
+        "Vitalitas & Stamina", 
         ],
       "Vitamin Wanita":[
-        "- Kehamilan & Menyusui", 
-        "- Menopause", 
-        "- Anemia", 
+        "Kehamilan & Menyusui", 
+        "Menopause", 
+        "Anemia", 
         ],
       "Tulang dan Sendi":[
-        "- Tulang dan Gigi", 
-        "- Persendian", 
+        "Tulang dan Gigi", 
+        "Persendian", 
         ],
       "Kecantikan":[
-        "- Rambut, Kulit & Kuku", 
-        "- Antioksidan", 
-        "- Vitamin E", 
+        "Rambut, Kulit & Kuku", 
+        "Antioksidan", 
+        "Vitamin E", 
         ],
       "Kesehatan Pencernaan":[
-        "- Probiotik", 
-        "- Serat", 
-        "- Enzim Pencernaan",
+        "Probiotik", 
+        "Serat", 
+        "Enzim Pencernaan",
         ],
       "Diet, Sehat & Bugar":[
-        "- Penurunan Berat Badan", 
-        "- Nutrisi Lainnya", 
-        "- Penambah Berat & Otot", 
-        "- Snack Sehat",
-        "- Produk Minuman"
+        "Penurunan Berat Badan", 
+        "Nutrisi Lainnya", 
+        "Penambah Berat & Otot", 
+        "Snack Sehat",
+        "Produk Minuman"
         ],
       "Produk Alami":[
-        "- Obat Herbal", 
-        "- Madu & Kurma", 
-        "- Habbatussauda & Zaitun",
+        "Obat Herbal", 
+        "Madu & Kurma", 
+        "Habbatussauda & Zaitun",
         ],
     }, 
 
     IbuDanAnak: {
       "Bayi dan Anak":[   
-        "- Telon & Kayu Putih",
-        "- Perawatan Kulit Bayi",
-        "- Lainnya (Bayi dan Anak)",
+        "Telon & Kayu Putih",
+        "Perawatan Kulit Bayi",
+        "Lainnya (Bayi dan Anak)",
         ],
       "Nutrisi":[   
-        "- Makanan dan Snack", 
-        "- Susu", 
-        "- Peralatan Makan", 
-        "- Susu Khusus", 
+        "Makanan dan Snack", 
+        "Susu", 
+        "Peralatan Makan", 
+        "Susu Khusus", 
         ],
       "Kehamilan dan Menyusui":[   
-        "- Perawatan Ibu Hamil", 
-        "- Perlengkapan Menyusui", 
-        "- Nutrisi Bersalin", 
+        "Perawatan Ibu Hamil", 
+        "Perlengkapan Menyusui", 
+        "Nutrisi Bersalin", 
         ],
       "Popok dan Tisu Basah":[   
-        "- Popok Bayi", 
-        "- Tisu Basah", 
+        "Popok Bayi", 
+        "Tisu Basah", 
         ],
       "Kesehatan Bayi dan Anak":[   
-        "- Plester Bayi & Anak", 
-        "- Hidung Tersumbat", 
-        "- Dekongestan & Minyak", 
+        "Plester Bayi & Anak", 
+        "Hidung Tersumbat", 
+        "Dekongestan & Minyak", 
         ],
       "Lainnya Bayi dan Anak":[   
-        "- Perlengkapan Pembersih", 
-        "- Sanitizer & Antiseptik", 
-        "- Lainnya Ibu dan Anak", 
+        "Perlengkapan Pembersih", 
+        "Sanitizer & Antiseptik", 
+        "Lainnya Ibu dan Anak", 
         ],                
     },
 
     KecantikanDanPerawatanDiri: {
       "Perawatan Jerawat":[
-        "- Perawtaan Jerawat",    
-        "- Acne Patch & Jel", 
+        "Perawtaan Jerawat",    
+        "Acne Patch & Jel", 
         ],
       "Kosmetik & Kecantikan":[   
-        "- Wajah", 
-        "- Kuku", 
-        "- Mata & Bibir", 
-        "- Aksesoris Kecantikan",
+        "Wajah", 
+        "Kuku", 
+        "Mata & Bibir", 
+        "Aksesoris Kecantikan",
         ],     
       "Eksim":[   
-        "- Eksim", 
+        "Eksim", 
         ],      
       "Perawatan Pria":[   
-        "- Perawatan Wajah Pria", 
-        "- Perawatan Rambut Pria", 
-        "- Pisau Cukur", 
-        "- Deodoran & Pewangi", 
-        "- Perawatan Tubuh",
-        "- Lainnya"
+        "Perawatan Wajah Pria", 
+        "Perawatan Rambut Pria", 
+        "Pisau Cukur", 
+        "Deodoran & Pewangi", 
+        "Perawatan Tubuh",
+        "Lainnya"
         ],      
       "Perawatan Diri":[   
-        "- Badan, Gigi, Rambut", 
-        "- Deodoran & Pewangi", 
-        "- Perawatan Tangan", 
-        "- Perawatan Kewanitaan", 
-        "- Produk Sekali Pakai",
-        "- Lainnya "
+        "Badan, Gigi, Rambut", 
+        "Deodoran & Pewangi", 
+        "Perawatan Tangan", 
+        "Perawatan Kewanitaan", 
+        "Produk Sekali Pakai",
+        "Lainnya "
         ],      
       "Perlindungan Matahari":[   
-        "- Sunblock & Sunscreen", 
+        "Sunblock & Sunscreen", 
         ],      
       "Perawatan Kulit":[   
-        "- Perawatan Wajah", 
-        "- Perawatan Kulit Berjerawat", 
-        "- Perawatan Tubuh", 
+        "Perawatan Wajah", 
+        "Perawatan Kulit Berjerawat", 
+        "Perawatan Tubuh", 
         ],
     }, 
 
     KesehatanSeksual: {
       "Hormon Wanita":[   
-        "- Hormon Wanita", 
+        "Hormon Wanita", 
         ],
       "Disfungsi Ereksi":[   
-        "- Disfungsi Ereksi", 
+        "Disfungsi Ereksi", 
         ],
       "Perawatan Kewanitaan":[   
-        "- Perawatan Kewanitaan", 
+        "Perawatan Kewanitaan", 
         ],
       "Test Pack":[   
-        "- Test Pack", 
+        "Test Pack", 
         ],
       "Kondom & Pelumas":[   
-        "- Kondom & Pelumas", 
+        "Kondom & Pelumas", 
         ]
     },  
     Susu: {
       "Susu Dewasa":[   
-        "- Orang Dewasa", 
-        "- Lansia", 
-        "- Susu Khusus", 
+        "Orang Dewasa", 
+        "Lansia", 
+        "Susu Khusus", 
         ],
        "Bayi & Anak":[   
-        "- Susu Formula Bayi", 
-        "- Susu Formula Anak", 
+        "Susu Formula Bayi", 
+        "Susu Formula Anak", 
         ],
       "Susu Medis Khusus":[   
-        "- Susu Medis Khusus", 
+        "Susu Medis Khusus", 
         ],
       "Lainnya":[   
-        "- Lainnya Dari Susu", 
+        "Lainnya Dari Susu", 
         ],
     },  
     PerawatanHidung: {
       "Perawatan Dewasa":[   
-        "- Dewasa", 
+        "Dewasa", 
         ],
       "Anak":[   
-        "- Perawatan Anak", 
+        "Perawatan Anak", 
         ],
     },   
   };

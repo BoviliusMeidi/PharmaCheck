@@ -12,135 +12,135 @@ export default function CategoryTable({ title }) {
   const categories = {
     BerdasarkanPenyakit: {
       "Batuk, Pilek & Flu": [   
-        "- Batuk dan Flu", 
-        "- Perawatan Hidung", 
-        "- Balsem & Minyak Esensial", 
-        "- Untuk Bayi & Anak", 
-        "- Pengobatan Herbal"
+        "Batuk dan Flu", 
+        "Perawatan Hidung", 
+        "Balsem & Minyak Esensial", 
+        "Untuk Bayi & Anak", 
+        "Pengobatan Herbal"
       ],
       "Masalah Pencernaan": [
-        "- Asam Lambung & GERD", 
-        "- Diare", 
-        "- Sembelit & Wasir", 
-        "- Mual dan Muntah",
-        "- Infeksi Cacing"
+        "Asam Lambung & GERD", 
+        "Diare", 
+        "Sembelit & Wasir", 
+        "Mual dan Muntah",
+        "Infeksi Cacing"
       ],
       "Masalah THT": [
-        "- Sariawan & Herpes", 
-        "- Obat Kumur Antiseptik", 
-        "- Pelega Tenggorokan", 
-        "- Obat Tetes Telinga", 
-        "- Kebersihan Hidung"
+        "Sariawan & Herpes", 
+        "Obat Kumur Antiseptik", 
+        "Pelega Tenggorokan", 
+        "Obat Tetes Telinga", 
+        "Kebersihan Hidung"
       ],
       "Kondisi Kulit": [
-        "- Jerawat", 
-        "- Infeksi Kulit", 
-        "- Dermatitis & Eksim", 
-        "- Obat Kulit Lainnya"
+        "Jerawat", 
+        "Infeksi Kulit", 
+        "Dermatitis & Eksim", 
+        "Obat Kulit Lainnya"
       ],
       "Tulang dan Sendi": [
-        "- Tulang & Osteoporosis", 
-        "- Relaksan Otot", 
-        "- Asam Urat & Radang Sendi", 
-        "- Balsem & Minyak"
+        "Tulang & Osteoporosis", 
+        "Relaksan Otot", 
+        "Asam Urat & Radang Sendi", 
+        "Balsem & Minyak"
       ],
       "Alergi": [
-        "- Obat Alergi", 
-        "- Pereda Gatal"
+        "Obat Alergi", 
+        "Pereda Gatal"
       ],
       "Demam dan Nyeri": [
-        "- Obat Demam & Nyeri", 
-        "- Terapi Panas & Dingin", 
-        "- Bayi & Anak", 
-        "- Pengobatan Herbal"
+        "Obat Demam & Nyeri", 
+        "Terapi Panas & Dingin", 
+        "Bayi & Anak", 
+        "Pengobatan Herbal"
       ],
       "Masalah Mata": [
-        "- Gatal, Kering & Merah", 
-        "- Masalah Mata Lainnya"
+        "Gatal, Kering & Merah", 
+        "Masalah Mata Lainnya"
       ],
       "Infeksi": [
-        "- Antibiotik", 
-        "- Antivirus", 
-        "- Antijamur"
+        "Antibiotik", 
+        "Antivirus", 
+        "Antijamur"
       ],
       "Kesuburan dan Lainnya": [
-        "- Kandung Kemih & Ginjal", 
-        "- Wanita", 
-        "- Pria", 
-        "- Pil Kontrasepsi", 
-        "- Kesuburan Lainnya"
+        "Kandung Kemih & Ginjal", 
+        "Wanita", 
+        "Pria", 
+        "Pil Kontrasepsi", 
+        "Kesuburan Lainnya"
       ],
       "Obat Lainnya": [
-        "- Anti Inflamasi", 
-        "- Gangguan Tidur", 
-        "- Gangguan Darah", 
-        "- Otak & Saraf", 
-        "-  Kesehatan Mental", 
-        "- Obat Lainnya"
+        "Anti Inflamasi", 
+        "Gangguan Tidur", 
+        "Gangguan Darah", 
+        "Otak & Saraf", 
+        "Kesehatan Mental", 
+        "Obat Lainnya"
       ]
     }, 
 
     KesehatanJantung: {
       "Obat Jantung": [   
-        "- Hipertensi", 
-        "- Penyakit Jantung", 
-        "- Kolesterol", 
+        "Hipertensi", 
+        "Penyakit Jantung", 
+        "Kolesterol", 
       ],
       "Monitoring dan Pengelolaan": [   
-        "- Alat Monitoring", 
-        "- Lanset, Jarum, & Swab",
+        "Alat Monitoring", 
+        "Lanset, Jarum, & Swab",
       ],
       "Vitamin dan Suplemen": [   
-        "- Vitamin dan Herbal", 
-        "- Makanan dan Nutrisi", 
+        "Vitamin dan Herbal", 
+        "Makanan dan Nutrisi", 
       ],
     },
 
     ObatRutin: {
       "Asma": [   
-        "- Obat Asma", 
+        "Obat Asma", 
       ],
       "Penyakit Jantung": [  
-        "- Obat Jantung", 
+        "Obat Jantung", 
       ],
       "Diabetes": [   
-        "- Obat Diabetes", 
+        "Obat Diabetes", 
       ],
     },
 
     Diabetes: {
       "Obat Diabetes": [   
-        "- Obat Diabetes",
+        "Obat Diabetes",
       ],
       "Suplemen": [   
-        "- Vitamin dan Herbal", 
-        "- Nutrisi Diabetes", 
-        "- Gula Diabetes"
+        "Vitamin dan Herbal", 
+        "Nutrisi Diabetes", 
+        "Gula Diabetes"
       ],
       "Insulin": [   
-        "- Insulin",
+        "Insulin",
       ],
     },
 
     OnkologiDanImun: {
       "Obat Kanker": [   
-        "- Obat Kanker", 
+        "Obat Kanker", 
       ],
       "Obat Imunosupresan": [   
-        "- Obat Imunosupresan", 
+        "Obat Imunosupresan", 
       ],
     },
 
     Asma: {
       "Obat Asma": [   
-        "- Obat Asma", 
+        "Obat Asma", 
       ],
       "Inhaler": [   
-        "- Inhaler", 
+        "Inhaler", 
       ],
       "Perawatan Asma": [   
-        "- Perangkat & Aksesoris",
-        "- Kaleng Oksigen" 
+        "Perangkat & Aksesoris",
+        "Kaleng Oksigen" 
       ],
     }
 
