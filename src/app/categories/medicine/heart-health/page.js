@@ -8,9 +8,9 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Obat Jantung',               icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Heart Medication' },
-  { id: 2, title: 'Monitoring & Pengelolaan',   icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
-  { id: 3, title: 'Vitamin & Suplemen',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 1, title: 'Obat Jantung',               icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Obat Jantung' },
+  { id: 2, title: 'Monitoring & Pengelolaan',   icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring & Pengelolaan' },
+  { id: 3, title: 'Vitamin & Suplemen',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamin & Suplemen' },
 ];
 
 export default function HeartHealthPage() {

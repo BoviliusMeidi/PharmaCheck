@@ -8,12 +8,12 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Hormon Wanita',            icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Heart & Immune' },
-  { id: 2, title: 'Disfungsi Ereksi',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
-  { id: 3, title: 'Perawtan Kewanitaan',      icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 4, title: 'Test Pack',                icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 5, title: 'Kontrasepsi Oral',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 6, title: 'Kondom & Pelumas',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 1, title: 'Hormon Wanita',            icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Hormon Wanita' },
+  { id: 2, title: 'Disfungsi Ereksi',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Disfungsi Ereksi' },
+  { id: 3, title: 'Perawatan Kewanitaan',      icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Perawatan Kewanitaan' },
+  { id: 4, title: 'Test Pack',                icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Test Pack' },
+  { id: 5, title: 'Kontrasepsi Oral',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Kontrasepsi Oral' },
+  { id: 6, title: 'Kondom & Pelumas',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Kondom & Pelumas' },
 ];
 
 export default function SexualHealthPage() {

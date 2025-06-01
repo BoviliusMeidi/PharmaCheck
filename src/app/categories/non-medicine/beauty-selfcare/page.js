@@ -8,13 +8,13 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Perawatan Jerawat',            icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Heart & Immune' },
-  { id: 2, title: 'Kosmetik dan Kecantikan',      icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
-  { id: 3, title: 'Eksim',                        icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 4, title: 'Perawatan Pria',               icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 5, title: 'Perawatan Diri',               icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 6, title: 'Perlindungan Matahari',        icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 7, title: 'Perawatan Kulit',              icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 1, title: 'Perawatan Jerawat',            icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Perawatan Jerawat' },
+  { id: 2, title: 'Kosmetik dan Kecantikan',      icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Kosmetik dan Kecantikan' },
+  { id: 3, title: 'Eksim',                        icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Eksim' },
+  { id: 4, title: 'Perawatan Pria',               icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Perawatan Pria' },
+  { id: 5, title: 'Perawatan Diri',               icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Perawatan Diri' },
+  { id: 6, title: 'Perlindungan Matahari',        icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Perlindungan Matahari' },
+  { id: 7, title: 'Perawatan Kulit',              icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Perawatan Kulit' },
 
 ];
 

@@ -8,9 +8,9 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
   
 const categories = [
-  { id: 1, title: 'Dewasa',                     icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Heart & Immune' },
-  { id: 2, title: 'Anak',                       icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
-  { id: 3, title: 'Vitamins & Supplements',     icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 1, title: 'Dewasa',                     icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Dewasa' },
+  { id: 2, title: 'Anak',                       icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Anak' },
+  { id: 3, title: 'Vitamins & Supplements',     icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Vitamins & Supplements' },
 ];
 
 export default function NasalCarePage() {

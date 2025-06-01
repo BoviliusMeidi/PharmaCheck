@@ -8,9 +8,9 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Obat Diabetes',    icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Heart Medication' },
-  { id: 2, title: 'Suplemen',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
-  { id: 3, title: 'Insulin',          icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 1, title: 'Obat Diabetes',    icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Obat Diabetes' },
+  { id: 2, title: 'Suplemen',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Suplemen' },
+  { id: 3, title: 'Insulin',          icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Insulin' },
 ];
 
 export default function DiabetesPage() {

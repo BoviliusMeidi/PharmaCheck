@@ -8,15 +8,15 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Kesehatan dan Imun',       icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Heart & Immune' },
-  { id: 2, title: 'Bayi dan Anak',            icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
-  { id: 3, title: 'Vitamin Pria',             icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 4, title: 'Vitamin Wanita',           icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 5, title: 'Tulang & Sendi',           icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 6, title: 'Kecantikan',               icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 7, title: 'Kesehatan Pencernaan',     icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 8, title: 'Diet Sehat Bugar',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
-  { id: 9, title: 'Produk Alami',             icon: '/categories/ByDisease/THT01.png',    href: '/categories/medicine/categories/Vitamins & Supplements' },
+  { id: 1, title: 'Kesehatan dan Imun',       icon: '/categories/ByDisease/CCF01.png',    href: '/categories/non-medicine/categories/Kesehatan dan Imun' },
+  { id: 2, title: 'Bayi dan Anak',            icon: '/categories/ByDisease/BD01.png',     href: '/categories/non-medicine/categories/Bayi dan Anak' },
+  { id: 3, title: 'Vitamin Pria',             icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Vitamin Pria' },
+  { id: 4, title: 'Vitamin Wanita',           icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Vitamin Wanita' },
+  { id: 5, title: 'Tulang & Sendi',           icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Tulang & Sendi' },
+  { id: 6, title: 'Kecantikan',               icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Kecantikan' },
+  { id: 7, title: 'Kesehatan Pencernaan',     icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Kesehatan Pencernaan' },
+  { id: 8, title: 'Diet Sehat Bugar',         icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Diet Sehat Bugar' },
+  { id: 9, title: 'Produk Alami',             icon: '/categories/ByDisease/THT01.png',    href: '/categories/non-medicine/categories/Produk Alami' },
 ];
 
 export default function VitaminSuplementPage() {

@@ -8,8 +8,8 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 
 const categories = [
-  { id: 1, title: 'Obat Kanker',                icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Heart Medication' },
-  { id: 2, title: 'Obat Imunosupresan',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Monitoring and Management' },
+  { id: 1, title: 'Obat Kanker',                icon: '/categories/ByDisease/CCF01.png',    href: '/categories/medicine/categories/Obat Kanker' },
+  { id: 2, title: 'Obat Imunosupresan',         icon: '/categories/ByDisease/BD01.png',     href: '/categories/medicine/categories/Obat Imunosupresan' },
 ];
 
 export default function OnkologiImunosupresanPage() {
