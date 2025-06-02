@@ -50,7 +50,7 @@ export default function SearchForm({ title, objective }) {
   };
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto px-4 sm:px-6">
+    <div className="relative w-full max-w-4xl">
       {/* Wrapper max width + padding for responsiveness */}
 
       <form
