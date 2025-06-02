@@ -45,14 +45,14 @@ export default function CategoriesPage() {
   const visibleIcons = Array.from({ length: iconsPerPage }).map((_, i) => {
     const index = (iconPage * iconsPerPage + i) % MedicineCategories.length;
     return MedicineCategories[index];
-  })
+  });
 
-  // Auto-play carousel
   useEffect(() => {
     autoPlayRef.current = () => {
       setCardPage((prev) => (prev + 1) % totalCardPages);
     };
   });
+
   useEffect(() => {
     const id = setInterval(() => autoPlayRef.current(), 3000);
     return () => clearInterval(id);
@@ -65,8 +65,8 @@ export default function CategoriesPage() {
     <div className="flex flex-col bg-[#FCF7F8]">
       <div className="bg-[url('/background/wave-up.svg')] bg-[#FCF7F8] bg-no-repeat bg-contain">
         <MenuBar />
-        <div className="flex-1 py-12 px-8 max-w-[1083px] mx-auto">
-          <h1 className="font-title text-center text-[80px]">
+        <div className="flex-1 py-12 px-4 sm:px-6 md:px-8 max-w-[1083px] mx-auto">
+          <h1 className="font-title text-center text-[40px] sm:text-[60px] md:text-[80px]">
             Kategori Obat-Obatan
           </h1>
 
@@ -78,7 +78,7 @@ export default function CategoriesPage() {
             >
               &#10094;
             </button>
-            <div className="flex justify-between px-12">
+            <div className="flex flex-wrap justify-center sm:justify-between gap-y-6 sm:gap-y-0 px-2 sm:px-4 md:px-12">
               {visibleIcons.map((cat) => (
                 <Link key={cat.key} href={`/categories/medicine/${cat.key}`}>
                   <div className="cursor-pointer flex flex-col items-center justify-between w-[140px] p-2">
@@ -89,7 +89,7 @@ export default function CategoriesPage() {
                       width={90}
                       height={90}
                     />
-                    <span className="mt-2 text-[18px] text-center font-description break-words overflow-hidden">
+                    <span className="mt-2 text-[16px] sm:text-[18px] text-center font-description break-words overflow-hidden">
                       {cat.label}
                     </span>
                   </div>
@@ -106,7 +106,6 @@ export default function CategoriesPage() {
 
           {/* Promo Carousel */}
           <div className="relative mt-16">
-            {/* Slider Window */}
             <div className="overflow-hidden w-full">
               <div
                 className="flex transition-transform duration-700 ease-in-out"
@@ -115,13 +114,13 @@ export default function CategoriesPage() {
                 {Array.from({ length: totalCardPages }).map((_, pageIndex) => (
                   <div
                     key={pageIndex}
-                    className="min-w-full flex justify-center space-x-6 px-2"
+                    className="min-w-full flex flex-col sm:flex-row justify-center items-center gap-6 px-2"
                   >
                     {promoCards
                       .slice(pageIndex * cardsPerPage, pageIndex * cardsPerPage + cardsPerPage)
                       .map((card) => (
                         <Link key={card.id} href={card.link}>
-                          <div className="relative w-[461px] h-[338px] rounded-3xl overflow-hidden">
+                          <div className="relative w-[90vw] sm:w-[461px] h-[250px] sm:h-[338px] rounded-3xl overflow-hidden">
                             <Image
                               src={card.image}
                               alt={card.alt}
@@ -139,7 +138,7 @@ export default function CategoriesPage() {
             {/* Arrow Controls */}
             <button
               onClick={prevPage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-20"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-20"
               aria-label="Previous"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -148,7 +147,7 @@ export default function CategoriesPage() {
             </button>
             <button
               onClick={nextPage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-20"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow-md transition-colors z-20"
               aria-label="Next"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -162,12 +161,11 @@ export default function CategoriesPage() {
                 <button
                   key={idx}
                   onClick={() => setCardPage(idx)}
-                  className={`
-                    rounded-full transition-all
-                    ${idx === cardPage
+                  className={`rounded-full transition-all ${
+                    idx === cardPage
                       ? 'bg-gray-800 w-5 h-5'
-                      : 'bg-gray-300 w-4 h-4 hover:bg-gray-500'}
-                  `}
+                      : 'bg-gray-300 w-4 h-4 hover:bg-gray-500'
+                  }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
               ))}
