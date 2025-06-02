@@ -34,7 +34,7 @@ export default function AZ() {
                     item.Sub_Sub_Sub_Categories.Sub_Sub_Categories.Sub_Categories.Main_Categories &&
                     item.Sub_Sub_Sub_Categories.Sub_Sub_Categories.Sub_Categories.Main_Categories.Name === 'Medicine'
             );
-            
+
             if (error) {
                 console.error('Error fetching medicines:', error.message);
             } else {
@@ -53,18 +53,22 @@ export default function AZ() {
     return (
         <div className="bg-[#FCF7F8] flex flex-col min-h-screen justify-between">
             <MenuBar />
-            <div className="p-20 bg-[url('/background/wave-up.svg')] bg-no-repeat z-10 bg-contain flex flex-col">
-                <div className="flex flex-row gap-8">
-                    <div className="w-1/5">
-                        <AZTable title={'Medicine'} objective={'medicine'} />
+            <div className="p-6 sm:p-10 md:p-20 bg-[url('/background/wave-up.svg')] bg-no-repeat z-10 bg-contain flex flex-col">
+                <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                    {/* Sidebar Table */}
+                    <div className="w-full md:w-1/5">
+                        <AZTable title={'Obat'} objective={'medicine'} />
                     </div>
+
+                    {/* Main Content */}
                     <div className="flex flex-col gap-5 w-full">
-                        <h1 className="font-title text-7xl">{`Medicine ${keyword.toUpperCase()} Alphabet`}</h1>
+                        <h1 className="font-title text-3xl sm:text-4xl md:text-5xl lg:text-7xl">
+                            {`Obat ${keyword.toUpperCase()} Alfabet`}
+                        </h1>
                         <div className='w-full max-w-4xl'>
-                            <SearchForm title={"Search"} objective={"product"}/>
+                            <SearchForm title={"Search"} objective={"product"} />
                         </div>
-                        
-                        <div className="grid grid-cols-4 gap-x-2 gap-y-5 p-2">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6 p-2">
                             {medicines.map((med) => (
                                 <div key={med.id} className="min-w-0">
                                     <Product data={med} />
