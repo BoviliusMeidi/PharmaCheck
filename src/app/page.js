@@ -13,7 +13,7 @@ export default function HomePage() {
       <div className="bg-[url('/background/wave-up.svg')] bg-[#FCF7F8] bg-no-repeat bg-contain">
         <Navbar />
         <div className="min-h-screen flex flex-col justify-center items-center gap-[40] mb-0">
-          <div className='flex flex-col gap-[16]'>
+          <div className='flex flex-col gap-[16] max-w-[1089px]'>
             <h1 className='font-title text-center text-4xl sm:text-5xl md:text-6xl lg:text-8xl'>Temukan Obat Anda</h1>
             <p className='font-description text-center sm:text-lg md:text-xl lg:text-2xl'>
               Temukan informasi obat yang lengkap dan akurat! Gunakan pencarian ini
