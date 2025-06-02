@@ -32,12 +32,9 @@ export async function fetchMedicineAuto(encodeInput) {
         .select('*')
         .ilike('medicine_name', `%${input}%`) // case-insensitive partial match
         .maybeSingle();
-
       dbData = data;
       kfaCode = data?.kfa_code;
     }
-
-    console.log(data)
 
     // Jika tidak ditemukan di database
     if (!kfaCode) {
