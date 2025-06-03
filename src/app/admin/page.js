@@ -18,8 +18,8 @@ export default function AdminPage() {
   useEffect(() => {
     const fetchSubSubCategories = async () => {
       const { data, error } = await supabase
-        .from('sub_sub_categories')
-        .select('id, name');
+        .from('Sub_Sub_Sub_Categories')
+        .select('Sub_Sub_Sub_ID, Name');
 
       if (error) {
         console.error('Error fetching sub_sub_categories:', error.message);
@@ -74,7 +74,7 @@ export default function AdminPage() {
         kfa_code: kfaCode,
         medicine_name: medicineName.toLowerCase(),
         image_url: publicUrl,
-        sub_sub_categories: selectedSubSubCategoryId
+        Sub_Sub_Sub_Categories_ID: selectedSubSubCategoryId
       }]);
 
     if (dbError) {
@@ -98,11 +98,11 @@ export default function AdminPage() {
     setSearchText(inputValue);
 
     const found = subSubCategories.find(
-      (cat) => cat.name.toLowerCase() === inputValue.toLowerCase()
+      (cat) => cat.Name.toLowerCase() === inputValue.toLowerCase()
     );
 
     if (found) {
-      setSelectedSubSubCategoryId(found.id);
+      setSelectedSubSubCategoryId(found.Sub_Sub_Sub_ID);
     } else {
       setSelectedSubSubCategoryId('');
     }
@@ -140,7 +140,7 @@ export default function AdminPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Sub Sub Category</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Sub Sub Sub Category</label>
             <input
               list="subSubCategories"
               value={searchText}
@@ -150,7 +150,7 @@ export default function AdminPage() {
             />
             <datalist id="subSubCategories">
               {subSubCategories.map((cat) => (
-                <option key={cat.id} value={cat.name} />
+                <option key={cat.Sub_Sub_Sub_ID} value={cat.Name} />
               ))}
             </datalist>
           </div>
