@@ -87,29 +87,29 @@ export default function HomePage() {
           <div className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[35px] font-description font-normal text-black text-justify mb-6 sm:mb-8 leading-[1.5] sm:leading-[1.4]">
             Data tersebut didasarkan pada kebenaran dan kepastian dari BPOM dan Kementerian Kesehatan Indonesia.
           </div>
-          <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-[1083px] gap-8">
-            <div className="flex flex-col gap-8 w-full lg:w-auto items-center">
+          <div className="flex flex-col lg:flex-row justify-between items-center w-full gap-8">
+            <div className="flex flex-col gap-8 items-center lg:items-start">
               <Image
                 src="/aboutUs/Kemenkes Logo.png"
                 alt="Kemenkes Logo"
+                className="object-contain mb-8"
                 width={617}
                 height={162}
-                className="object-contain w-full max-w-[500px] lg:max-w-none"
               />
               <Image
                 src="/aboutUs/BPOM Logo.png"
                 alt="BPOM Logo"
+                className="object-contain"
                 width={617}
-                height={185}
-                className="object-contain w-full max-w-[500px] lg:max-w-none"
+                height={162}
               />
             </div>
             <Image
               src="/aboutUs/RS Hermina Mitra Logo.png"
               alt="RS Hermina Logo"
+              className="object-contain"
               width={371}
               height={371}
-              className="object-contain w-full max-w-[300px] lg:max-w-[371px]"
             />
           </div>
         </div>
