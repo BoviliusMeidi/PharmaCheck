@@ -143,7 +143,7 @@ export default function HomePage() {
             Tidak ada pendaftaran atau langkah-langkah yang rumit - cukup cari dan pergi.
           </div>
         </AccordionItem>
-        <AccordionItem title="Siapa patner kerja PharmaCheck?">
+        <AccordionItem title="Siapa mitra kerja PharmaCheck?">
           <div className="font-header sm:text-2xl md:text-3xl text-lg mt-4">
             PharmaCheck bekerja sama dengan lembaga-lembaga tepercaya seperti:
             <br />
