@@ -89,7 +89,7 @@ export default function AboutPage() {
         </div>
 
         <div className="bg-[url('/background/green-wave.svg')] bg-[#FCF7F8] bg-no-repeat bg-contain">
-          <div className="flex-1 py-12 px-4 sm:px-6 md:px-8 max-w-[1083px] mx-auto">
+          <div className="flex-1 py-12 px-4 sm:px-6 md:px-8 max-w-[1100px] mx-auto">
             <div className="text-black font-title text-[40px] sm:text-[64px] md:text-[80px] font-normal text-center mb-8">
               MITRA KAMI
             </div>
