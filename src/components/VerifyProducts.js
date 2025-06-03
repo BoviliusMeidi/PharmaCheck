@@ -6,6 +6,7 @@ import Image from 'next/image';
 import LoadingSpinner from './LoadingSpinner';
 import { fetchMedicineAuto } from '@/lib/fetchMedicine';
 import { stripTags, capitalizeWords } from '@/lib/utils';
+import MenuBar from './MenuBar';
 
 const VerifyProductPage = () => {
   const params = useParams();
@@ -37,13 +38,13 @@ const VerifyProductPage = () => {
 
   return (
     <div
-      className={`bg-no-repeat bg-cover bg-center ${
-        product.api
-          ? "bg-[url('/background/wave-bottom.svg')]"
-          : "bg-[url('/background/wave-up.svg')]"
-      }`}
+      className={`bg-no-repeat bg-cover bg-center ${product.api
+        ? "bg-[url('/background/wave-bottom.svg')]"
+        : "bg-[url('/background/wave-up.svg')]"
+        }`}
     >
       <div className="min-h-screen flex flex-col justify-center items-center px-4 md:px-8 py-8 gap-8">
+        <MenuBar />
         {product.api ? (
           <div className="flex flex-col justify-center items-center max-w-7xl w-full">
             <h1 className="font-title text-center text-4xl sm:text-5xl lg:text-7xl">
