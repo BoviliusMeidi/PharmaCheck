@@ -10,10 +10,10 @@ https://pharma-check-wheat.vercel.app/
 2. npm v10 or above
 3. Visual Studio Code or other code editor
 
-### Clone the UNIQLO github
+### Clone the PharmaCheck github
 ```bash
-git clone https://github.com/BoviliusMeidi/UNIQLO.git
-cd UNIQLO
+git clone https://github.com/BoviliusMeidi/PharmaCheck.git
+cd PharmaCheck
 ```
 ### Run the BackEnd Environment
 
